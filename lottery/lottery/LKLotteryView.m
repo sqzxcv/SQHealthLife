@@ -24,6 +24,7 @@
 {
     if(self.dialView == nil)
     {
+        _dialView = [[UIImageView alloc]initWithFrame:CGRectZero];
         [self addSubview:_dialView];
     }
     _dialView.frame = CGRectMake(0, 0, panel.size.width, panel.size.height);
