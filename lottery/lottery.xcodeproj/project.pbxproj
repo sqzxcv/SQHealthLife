@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5302B83916E81D200062B3FF /* dial_panel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5302B83716E81D200062B3FF /* dial_panel@2x.png */; };
+		5302B83A16E81D200062B3FF /* dialplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5302B83816E81D200062B3FF /* dialplate@2x.png */; };
+		5302B83D16E81F4F0062B3FF /* CAAnimation+EasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 5302B83C16E81F4F0062B3FF /* CAAnimation+EasingEquations.m */; };
+		539F5BCE16E7312200B1A3F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539F5BCD16E7312200B1A3F8 /* UIKit.framework */; };
+		539F5BD016E7312200B1A3F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539F5BCF16E7312200B1A3F8 /* Foundation.framework */; };
+		539F5BD216E7312200B1A3F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539F5BD116E7312200B1A3F8 /* CoreGraphics.framework */; };
+		539F5BD816E7312200B1A3F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 539F5BD616E7312200B1A3F8 /* InfoPlist.strings */; };
+		539F5BDA16E7312200B1A3F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 539F5BD916E7312200B1A3F8 /* main.m */; };
+		539F5BDE16E7312200B1A3F8 /* LKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 539F5BDD16E7312200B1A3F8 /* LKAppDelegate.m */; };
+		539F5BE016E7312200B1A3F8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 539F5BDF16E7312200B1A3F8 /* Default.png */; };
+		539F5BE216E7312200B1A3F8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539F5BE116E7312200B1A3F8 /* Default@2x.png */; };
+		539F5BE416E7312200B1A3F8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539F5BE316E7312200B1A3F8 /* Default-568h@2x.png */; };
+		539F5BE716E7312200B1A3F8 /* LKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539F5BE616E7312200B1A3F8 /* LKViewController.m */; };
+		539F5BEA16E7312200B1A3F8 /* LKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 539F5BE816E7312200B1A3F8 /* LKViewController.xib */; };
+		539F5BF216E7323700B1A3F8 /* LKLotteryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 539F5BF116E7323700B1A3F8 /* LKLotteryView.m */; };
+		539F5BF416E732DF00B1A3F8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539F5BF316E732DF00B1A3F8 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5302B83716E81D200062B3FF /* dial_panel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial_panel@2x.png"; sourceTree = "<group>"; };
+		5302B83816E81D200062B3FF /* dialplate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialplate@2x.png"; sourceTree = "<group>"; };
+		5302B83B16E81F4F0062B3FF /* CAAnimation+EasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+EasingEquations.h"; sourceTree = "<group>"; };
+		5302B83C16E81F4F0062B3FF /* CAAnimation+EasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+EasingEquations.m"; sourceTree = "<group>"; };
+		539F5BCA16E7312200B1A3F8 /* lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		539F5BCD16E7312200B1A3F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		539F5BCF16E7312200B1A3F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		539F5BD116E7312200B1A3F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		539F5BD516E7312200B1A3F8 /* lottery-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "lottery-Info.plist"; sourceTree = "<group>"; };
+		539F5BD716E7312200B1A3F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		539F5BD916E7312200B1A3F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		539F5BDB16E7312200B1A3F8 /* lottery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lottery-Prefix.pch"; sourceTree = "<group>"; };
+		539F5BDC16E7312200B1A3F8 /* LKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKAppDelegate.h; sourceTree = "<group>"; };
+		539F5BDD16E7312200B1A3F8 /* LKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKAppDelegate.m; sourceTree = "<group>"; };
+		539F5BDF16E7312200B1A3F8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		539F5BE116E7312200B1A3F8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		539F5BE316E7312200B1A3F8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		539F5BE516E7312200B1A3F8 /* LKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKViewController.h; sourceTree = "<group>"; };
+		539F5BE616E7312200B1A3F8 /* LKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKViewController.m; sourceTree = "<group>"; };
+		539F5BE916E7312200B1A3F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LKViewController.xib; sourceTree = "<group>"; };
+		539F5BF016E7323700B1A3F8 /* LKLotteryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLotteryView.h; sourceTree = "<group>"; };
+		539F5BF116E7323700B1A3F8 /* LKLotteryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLotteryView.m; sourceTree = "<group>"; };
+		539F5BF316E732DF00B1A3F8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		539F5BC716E7312200B1A3F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				539F5BF416E732DF00B1A3F8 /* QuartzCore.framework in Frameworks */,
+				539F5BCE16E7312200B1A3F8 /* UIKit.framework in Frameworks */,
+				539F5BD016E7312200B1A3F8 /* Foundation.framework in Frameworks */,
+				539F5BD216E7312200B1A3F8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5302B83E16E8312B0062B3FF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				539F5BF016E7323700B1A3F8 /* LKLotteryView.h */,
+				539F5BF116E7323700B1A3F8 /* LKLotteryView.m */,
+				5302B83B16E81F4F0062B3FF /* CAAnimation+EasingEquations.h */,
+				5302B83C16E81F4F0062B3FF /* CAAnimation+EasingEquations.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		539F5BC116E7312200B1A3F8 = {
+			isa = PBXGroup;
+			children = (
+				539F5BF316E732DF00B1A3F8 /* QuartzCore.framework */,
+				539F5BD316E7312200B1A3F8 /* lottery */,
+				539F5BCC16E7312200B1A3F8 /* Frameworks */,
+				539F5BCB16E7312200B1A3F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		539F5BCB16E7312200B1A3F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				539F5BCA16E7312200B1A3F8 /* lottery.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		539F5BCC16E7312200B1A3F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				539F5BCD16E7312200B1A3F8 /* UIKit.framework */,
+				539F5BCF16E7312200B1A3F8 /* Foundation.framework */,
+				539F5BD116E7312200B1A3F8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		539F5BD316E7312200B1A3F8 /* lottery */ = {
+			isa = PBXGroup;
+			children = (
+				5302B83E16E8312B0062B3FF /* Classes */,
+				5302B83716E81D200062B3FF /* dial_panel@2x.png */,
+				5302B83816E81D200062B3FF /* dialplate@2x.png */,
+				539F5BDC16E7312200B1A3F8 /* LKAppDelegate.h */,
+				539F5BDD16E7312200B1A3F8 /* LKAppDelegate.m */,
+				539F5BE516E7312200B1A3F8 /* LKViewController.h */,
+				539F5BE616E7312200B1A3F8 /* LKViewController.m */,
+				539F5BE816E7312200B1A3F8 /* LKViewController.xib */,
+				539F5BD416E7312200B1A3F8 /* Supporting Files */,
+			);
+			path = lottery;
+			sourceTree = "<group>";
+		};
+		539F5BD416E7312200B1A3F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				539F5BD516E7312200B1A3F8 /* lottery-Info.plist */,
+				539F5BD616E7312200B1A3F8 /* InfoPlist.strings */,
+				539F5BD916E7312200B1A3F8 /* main.m */,
+				539F5BDB16E7312200B1A3F8 /* lottery-Prefix.pch */,
+				539F5BDF16E7312200B1A3F8 /* Default.png */,
+				539F5BE116E7312200B1A3F8 /* Default@2x.png */,
+				539F5BE316E7312200B1A3F8 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		539F5BC916E7312200B1A3F8 /* lottery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 539F5BED16E7312200B1A3F8 /* Build configuration list for PBXNativeTarget "lottery" */;
+			buildPhases = (
+				539F5BC616E7312200B1A3F8 /* Sources */,
+				539F5BC716E7312200B1A3F8 /* Frameworks */,
+				539F5BC816E7312200B1A3F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lottery;
+			productName = lottery;
+			productReference = 539F5BCA16E7312200B1A3F8 /* lottery.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		539F5BC216E7312200B1A3F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LK;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = ljh;
+			};
+			buildConfigurationList = 539F5BC516E7312200B1A3F8 /* Build configuration list for PBXProject "lottery" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 539F5BC116E7312200B1A3F8;
+			productRefGroup = 539F5BCB16E7312200B1A3F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				539F5BC916E7312200B1A3F8 /* lottery */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		539F5BC816E7312200B1A3F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				539F5BD816E7312200B1A3F8 /* InfoPlist.strings in Resources */,
+				539F5BE016E7312200B1A3F8 /* Default.png in Resources */,
+				539F5BE216E7312200B1A3F8 /* Default@2x.png in Resources */,
+				539F5BE416E7312200B1A3F8 /* Default-568h@2x.png in Resources */,
+				539F5BEA16E7312200B1A3F8 /* LKViewController.xib in Resources */,
+				5302B83916E81D200062B3FF /* dial_panel@2x.png in Resources */,
+				5302B83A16E81D200062B3FF /* dialplate@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		539F5BC616E7312200B1A3F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				539F5BDA16E7312200B1A3F8 /* main.m in Sources */,
+				539F5BDE16E7312200B1A3F8 /* LKAppDelegate.m in Sources */,
+				539F5BE716E7312200B1A3F8 /* LKViewController.m in Sources */,
+				539F5BF216E7323700B1A3F8 /* LKLotteryView.m in Sources */,
+				5302B83D16E81F4F0062B3FF /* CAAnimation+EasingEquations.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		539F5BD616E7312200B1A3F8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				539F5BD716E7312200B1A3F8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		539F5BE816E7312200B1A3F8 /* LKViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				539F5BE916E7312200B1A3F8 /* en */,
+			);
+			name = LKViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		539F5BEB16E7312200B1A3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		539F5BEC16E7312200B1A3F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		539F5BEE16E7312200B1A3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lottery/lottery-Prefix.pch";
+				INFOPLIST_FILE = "lottery/lottery-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		539F5BEF16E7312200B1A3F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lottery/lottery-Prefix.pch";
+				INFOPLIST_FILE = "lottery/lottery-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		539F5BC516E7312200B1A3F8 /* Build configuration list for PBXProject "lottery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				539F5BEB16E7312200B1A3F8 /* Debug */,
+				539F5BEC16E7312200B1A3F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		539F5BED16E7312200B1A3F8 /* Build configuration list for PBXNativeTarget "lottery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				539F5BEE16E7312200B1A3F8 /* Debug */,
+				539F5BEF16E7312200B1A3F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 539F5BC216E7312200B1A3F8 /* Project object */;
+}

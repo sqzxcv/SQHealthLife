@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Articles</key>
+	<dict>
+		<key>20140508</key>
+		<string>115.29.18.185:80/resources/ProjectAA/Articles</string>
+	</dict>
+	<key>Jokes</key>
+	<dict>
+		<key>20140509</key>
+		<string>115.29.18.185:80/resources/ProjectAA/Jokes</string>
+	</dict>
+	<key>Novels</key>
+	<dict>
+		<key>20140509</key>
+		<string>115.29.18.185:80/resources/ProjectAA/Novels</string>
+	</dict>
+	<key>Seeds</key>
+	<dict>
+		<key>20140509</key>
+		<string>115.29.18.185:80/resources/ProjectAA/Seeds</string>
+	</dict>
+	<key>Images</key>
+	<dict>
+		<key>20140509</key>
+		<string>115.29.18.185:80/resources/ProjectAA/Images</string>
+	</dict>
+</dict>
+</plist>

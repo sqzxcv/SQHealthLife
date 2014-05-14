@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E0FADF2B-3587-48B4-A7CC-39D15CAF15B4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SQHealthLife</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>475DEC3D-09F5-4B3B-A22C-F47B30D01CAE</key>
+		<string>https://github.com/sqzxcv/SQHealthLife.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SQHealthLife/SQHealthLife.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>475DEC3D-09F5-4B3B-A22C-F47B30D01CAE</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sqzxcv/SQHealthLife.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>475DEC3D-09F5-4B3B-A22C-F47B30D01CAE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>475DEC3D-09F5-4B3B-A22C-F47B30D01CAE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SQHealthLife</string>
+		</dict>
+	</array>
+</dict>
+</plist>

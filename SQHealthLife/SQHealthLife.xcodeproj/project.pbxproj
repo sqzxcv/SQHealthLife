@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB0AC98B19169C53006FA6E0 /* SQHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0AC98919169C53006FA6E0 /* SQHomeViewController.m */; };
+		EB0AC98C19169C53006FA6E0 /* SQHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0AC98A19169C53006FA6E0 /* SQHomeViewController.xib */; };
+		EB0AC99019169D70006FA6E0 /* SQGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0AC98E19169D70006FA6E0 /* SQGameViewController.m */; };
+		EB0AC99119169D70006FA6E0 /* SQGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0AC98F19169D70006FA6E0 /* SQGameViewController.xib */; };
+		EB0AC99519169D89006FA6E0 /* SQMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0AC99319169D89006FA6E0 /* SQMineViewController.m */; };
+		EB0AC99619169D89006FA6E0 /* SQMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0AC99419169D89006FA6E0 /* SQMineViewController.xib */; };
+		EB642FAB191CEBB4004A11FC /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = EB642FAA191CEBB4004A11FC /* NSString+MD5.m */; };
+		EB8E1A8519149AE900788AAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8E1A8419149AE900788AAB /* Foundation.framework */; };
+		EB8E1A8719149AE900788AAB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8E1A8619149AE900788AAB /* CoreGraphics.framework */; };
+		EB8E1A8919149AE900788AAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8E1A8819149AE900788AAB /* UIKit.framework */; };
+		EB8E1A8F19149AE900788AAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB8E1A8D19149AE900788AAB /* InfoPlist.strings */; };
+		EB8E1A9119149AE900788AAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8E1A9019149AE900788AAB /* main.m */; };
+		EB8E1A9519149AE900788AAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8E1A9419149AE900788AAB /* AppDelegate.m */; };
+		EB8E1A9719149AE900788AAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB8E1A9619149AE900788AAB /* Images.xcassets */; };
+		EB8E1A9E19149AE900788AAB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8E1A9D19149AE900788AAB /* XCTest.framework */; };
+		EB8E1A9F19149AE900788AAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8E1A8419149AE900788AAB /* Foundation.framework */; };
+		EB8E1AA019149AE900788AAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8E1A8819149AE900788AAB /* UIKit.framework */; };
+		EB8E1AA819149AE900788AAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB8E1AA619149AE900788AAB /* InfoPlist.strings */; };
+		EB8E1AAA19149AE900788AAB /* SQHealthLifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8E1AA919149AE900788AAB /* SQHealthLifeTests.m */; };
+		EB8E1AB519154D0C00788AAB /* HMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8E1AB419154D0C00788AAB /* HMMainViewController.m */; };
+		EB8E1ABD19154F7600788AAB /* PAFoundation_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8E1ABA19154F7600788AAB /* PAFoundation_iOS.framework */; };
+		EB8E1AC71915526800788AAB /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8E1AC61915526800788AAB /* libxml2.dylib */; };
+		EB8E1AC91915526F00788AAB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8E1AC81915526F00788AAB /* libz.dylib */; };
+		EBDA0778191E4A1400D96E1C /* HLDocumentReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA0776191E4A1400D96E1C /* HLDocumentReaderViewController.m */; };
+		EBDA0779191E4A1400D96E1C /* HLDocumentReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA0777191E4A1400D96E1C /* HLDocumentReaderViewController.xib */; };
+		EBDA077E191F719E00D96E1C /* disk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBDA077C191F719E00D96E1C /* disk.jpg */; };
+		EBDA077F191F719E00D96E1C /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDA077D191F719E00D96E1C /* start.png */; };
+		EBDAA6961917D9600098E0DB /* SQDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDAA6951917D9600098E0DB /* SQDataCenter.m */; };
+		EBFF108A191BE07F00A30EE9 /* CheckUpdateList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBFF1089191BE07F00A30EE9 /* CheckUpdateList.plist */; };
+		EBFF108D191BF58E00A30EE9 /* 20140509.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBFF108C191BF58E00A30EE9 /* 20140509.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB8E1AA119149AE900788AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB8E1A7919149AE900788AAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB8E1A8019149AE900788AAB;
+			remoteInfo = SQHealthLife;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB0AC98819169C53006FA6E0 /* SQHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQHomeViewController.h; sourceTree = "<group>"; };
+		EB0AC98919169C53006FA6E0 /* SQHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQHomeViewController.m; sourceTree = "<group>"; };
+		EB0AC98A19169C53006FA6E0 /* SQHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQHomeViewController.xib; sourceTree = "<group>"; };
+		EB0AC98D19169D70006FA6E0 /* SQGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGameViewController.h; sourceTree = "<group>"; };
+		EB0AC98E19169D70006FA6E0 /* SQGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQGameViewController.m; sourceTree = "<group>"; };
+		EB0AC98F19169D70006FA6E0 /* SQGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQGameViewController.xib; sourceTree = "<group>"; };
+		EB0AC99219169D89006FA6E0 /* SQMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQMineViewController.h; sourceTree = "<group>"; };
+		EB0AC99319169D89006FA6E0 /* SQMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQMineViewController.m; sourceTree = "<group>"; };
+		EB0AC99419169D89006FA6E0 /* SQMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQMineViewController.xib; sourceTree = "<group>"; };
+		EB642FA9191CEBB4004A11FC /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		EB642FAA191CEBB4004A11FC /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		EB8E1A8119149AE900788AAB /* SQHealthLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQHealthLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB8E1A8419149AE900788AAB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EB8E1A8619149AE900788AAB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EB8E1A8819149AE900788AAB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EB8E1A8C19149AE900788AAB /* SQHealthLife-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SQHealthLife-Info.plist"; sourceTree = "<group>"; };
+		EB8E1A8E19149AE900788AAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB8E1A9019149AE900788AAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EB8E1A9219149AE900788AAB /* SQHealthLife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQHealthLife-Prefix.pch"; sourceTree = "<group>"; };
+		EB8E1A9319149AE900788AAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EB8E1A9419149AE900788AAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EB8E1A9619149AE900788AAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EB8E1A9C19149AE900788AAB /* SQHealthLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQHealthLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB8E1A9D19149AE900788AAB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EB8E1AA519149AE900788AAB /* SQHealthLifeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SQHealthLifeTests-Info.plist"; sourceTree = "<group>"; };
+		EB8E1AA719149AE900788AAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB8E1AA919149AE900788AAB /* SQHealthLifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQHealthLifeTests.m; sourceTree = "<group>"; };
+		EB8E1AB319154D0C00788AAB /* HMMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMainViewController.h; sourceTree = "<group>"; };
+		EB8E1AB419154D0C00788AAB /* HMMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMainViewController.m; sourceTree = "<group>"; };
+		EB8E1AB919154F0B00788AAB /* const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = const.h; sourceTree = "<group>"; };
+		EB8E1ABA19154F7600788AAB /* PAFoundation_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PAFoundation_iOS.framework; path = SQHealthLife/Framework/PAFoundation_iOS.framework; sourceTree = "<group>"; };
+		EB8E1AC61915526800788AAB /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		EB8E1AC81915526F00788AAB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EBDA0775191E4A1400D96E1C /* HLDocumentReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDocumentReaderViewController.h; sourceTree = "<group>"; };
+		EBDA0776191E4A1400D96E1C /* HLDocumentReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDocumentReaderViewController.m; sourceTree = "<group>"; };
+		EBDA0777191E4A1400D96E1C /* HLDocumentReaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLDocumentReaderViewController.xib; sourceTree = "<group>"; };
+		EBDA077C191F719E00D96E1C /* disk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = disk.jpg; sourceTree = "<group>"; };
+		EBDA077D191F719E00D96E1C /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		EBDAA6941917D9600098E0DB /* SQDataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQDataCenter.h; sourceTree = "<group>"; };
+		EBDAA6951917D9600098E0DB /* SQDataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQDataCenter.m; sourceTree = "<group>"; };
+		EBFF1089191BE07F00A30EE9 /* CheckUpdateList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CheckUpdateList.plist; sourceTree = "<group>"; };
+		EBFF108C191BF58E00A30EE9 /* 20140509.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 20140509.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB8E1A7E19149AE900788AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB8E1AC91915526F00788AAB /* libz.dylib in Frameworks */,
+				EB8E1AC71915526800788AAB /* libxml2.dylib in Frameworks */,
+				EB8E1ABD19154F7600788AAB /* PAFoundation_iOS.framework in Frameworks */,
+				EB8E1A8719149AE900788AAB /* CoreGraphics.framework in Frameworks */,
+				EB8E1A8919149AE900788AAB /* UIKit.framework in Frameworks */,
+				EB8E1A8519149AE900788AAB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB8E1A9919149AE900788AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB8E1A9E19149AE900788AAB /* XCTest.framework in Frameworks */,
+				EB8E1AA019149AE900788AAB /* UIKit.framework in Frameworks */,
+				EB8E1A9F19149AE900788AAB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB0AC9971916A562006FA6E0 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				EB8E1AB319154D0C00788AAB /* HMMainViewController.h */,
+				EB8E1AB419154D0C00788AAB /* HMMainViewController.m */,
+				EB0AC98819169C53006FA6E0 /* SQHomeViewController.h */,
+				EB0AC98919169C53006FA6E0 /* SQHomeViewController.m */,
+				EB0AC98A19169C53006FA6E0 /* SQHomeViewController.xib */,
+				EB0AC98D19169D70006FA6E0 /* SQGameViewController.h */,
+				EB0AC98E19169D70006FA6E0 /* SQGameViewController.m */,
+				EB0AC98F19169D70006FA6E0 /* SQGameViewController.xib */,
+				EB0AC99219169D89006FA6E0 /* SQMineViewController.h */,
+				EB0AC99319169D89006FA6E0 /* SQMineViewController.m */,
+				EB0AC99419169D89006FA6E0 /* SQMineViewController.xib */,
+				EBDA0775191E4A1400D96E1C /* HLDocumentReaderViewController.h */,
+				EBDA0776191E4A1400D96E1C /* HLDocumentReaderViewController.m */,
+				EBDA0777191E4A1400D96E1C /* HLDocumentReaderViewController.xib */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+		EB0AC9981916A599006FA6E0 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				EBDAA6941917D9600098E0DB /* SQDataCenter.h */,
+				EBDAA6951917D9600098E0DB /* SQDataCenter.m */,
+			);
+			name = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		EB8E1A7819149AE900788AAB = {
+			isa = PBXGroup;
+			children = (
+				EB8E1A8A19149AE900788AAB /* SQHealthLife */,
+				EB8E1AA319149AE900788AAB /* SQHealthLifeTests */,
+				EB8E1A8319149AE900788AAB /* Frameworks */,
+				EB8E1A8219149AE900788AAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB8E1A8219149AE900788AAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB8E1A8119149AE900788AAB /* SQHealthLife.app */,
+				EB8E1A9C19149AE900788AAB /* SQHealthLifeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB8E1A8319149AE900788AAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB8E1AC81915526F00788AAB /* libz.dylib */,
+				EB8E1AC61915526800788AAB /* libxml2.dylib */,
+				EB8E1ABA19154F7600788AAB /* PAFoundation_iOS.framework */,
+				EB8E1A8419149AE900788AAB /* Foundation.framework */,
+				EB8E1A8619149AE900788AAB /* CoreGraphics.framework */,
+				EB8E1A8819149AE900788AAB /* UIKit.framework */,
+				EB8E1A9D19149AE900788AAB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB8E1A8A19149AE900788AAB /* SQHealthLife */ = {
+			isa = PBXGroup;
+			children = (
+				EB642FA9191CEBB4004A11FC /* NSString+MD5.h */,
+				EB642FAA191CEBB4004A11FC /* NSString+MD5.m */,
+				EB0AC9981916A599006FA6E0 /* BusinessLogic */,
+				EB0AC9971916A562006FA6E0 /* UserInterface */,
+				EB8E1AB919154F0B00788AAB /* const.h */,
+				EB8E1A9319149AE900788AAB /* AppDelegate.h */,
+				EB8E1A9419149AE900788AAB /* AppDelegate.m */,
+				EB8E1A9619149AE900788AAB /* Images.xcassets */,
+				EB8E1A8B19149AE900788AAB /* Supporting Files */,
+			);
+			path = SQHealthLife;
+			sourceTree = "<group>";
+		};
+		EB8E1A8B19149AE900788AAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBDA077B191F716200D96E1C /* images */,
+				EB8E1A8C19149AE900788AAB /* SQHealthLife-Info.plist */,
+				EB8E1A8D19149AE900788AAB /* InfoPlist.strings */,
+				EB8E1A9019149AE900788AAB /* main.m */,
+				EB8E1A9219149AE900788AAB /* SQHealthLife-Prefix.pch */,
+				EBFF108B191BF55300A30EE9 /* Temp */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB8E1AA319149AE900788AAB /* SQHealthLifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB8E1AA919149AE900788AAB /* SQHealthLifeTests.m */,
+				EB8E1AA419149AE900788AAB /* Supporting Files */,
+			);
+			path = SQHealthLifeTests;
+			sourceTree = "<group>";
+		};
+		EB8E1AA419149AE900788AAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB8E1AA519149AE900788AAB /* SQHealthLifeTests-Info.plist */,
+				EB8E1AA619149AE900788AAB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBDA077B191F716200D96E1C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				EBDA077C191F719E00D96E1C /* disk.jpg */,
+				EBDA077D191F719E00D96E1C /* start.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		EBFF108B191BF55300A30EE9 /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				EBFF1089191BE07F00A30EE9 /* CheckUpdateList.plist */,
+				EBFF108C191BF58E00A30EE9 /* 20140509.plist */,
+			);
+			name = Temp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB8E1A8019149AE900788AAB /* SQHealthLife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB8E1AAD19149AE900788AAB /* Build configuration list for PBXNativeTarget "SQHealthLife" */;
+			buildPhases = (
+				EB8E1A7D19149AE900788AAB /* Sources */,
+				EB8E1A7E19149AE900788AAB /* Frameworks */,
+				EB8E1A7F19149AE900788AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQHealthLife;
+			productName = SQHealthLife;
+			productReference = EB8E1A8119149AE900788AAB /* SQHealthLife.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB8E1A9B19149AE900788AAB /* SQHealthLifeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB8E1AB019149AE900788AAB /* Build configuration list for PBXNativeTarget "SQHealthLifeTests" */;
+			buildPhases = (
+				EB8E1A9819149AE900788AAB /* Sources */,
+				EB8E1A9919149AE900788AAB /* Frameworks */,
+				EB8E1A9A19149AE900788AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB8E1AA219149AE900788AAB /* PBXTargetDependency */,
+			);
+			name = SQHealthLifeTests;
+			productName = SQHealthLifeTests;
+			productReference = EB8E1A9C19149AE900788AAB /* SQHealthLifeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB8E1A7919149AE900788AAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = SQ;
+				TargetAttributes = {
+					EB8E1A9B19149AE900788AAB = {
+						TestTargetID = EB8E1A8019149AE900788AAB;
+					};
+				};
+			};
+			buildConfigurationList = EB8E1A7C19149AE900788AAB /* Build configuration list for PBXProject "SQHealthLife" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EB8E1A7819149AE900788AAB;
+			productRefGroup = EB8E1A8219149AE900788AAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB8E1A8019149AE900788AAB /* SQHealthLife */,
+				EB8E1A9B19149AE900788AAB /* SQHealthLifeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB8E1A7F19149AE900788AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBFF108A191BE07F00A30EE9 /* CheckUpdateList.plist in Resources */,
+				EB8E1A8F19149AE900788AAB /* InfoPlist.strings in Resources */,
+				EBDA077F191F719E00D96E1C /* start.png in Resources */,
+				EB0AC99119169D70006FA6E0 /* SQGameViewController.xib in Resources */,
+				EB0AC98C19169C53006FA6E0 /* SQHomeViewController.xib in Resources */,
+				EBDA077E191F719E00D96E1C /* disk.jpg in Resources */,
+				EB0AC99619169D89006FA6E0 /* SQMineViewController.xib in Resources */,
+				EBFF108D191BF58E00A30EE9 /* 20140509.plist in Resources */,
+				EBDA0779191E4A1400D96E1C /* HLDocumentReaderViewController.xib in Resources */,
+				EB8E1A9719149AE900788AAB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB8E1A9A19149AE900788AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB8E1AA819149AE900788AAB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB8E1A7D19149AE900788AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBDAA6961917D9600098E0DB /* SQDataCenter.m in Sources */,
+				EB8E1AB519154D0C00788AAB /* HMMainViewController.m in Sources */,
+				EB8E1A9519149AE900788AAB /* AppDelegate.m in Sources */,
+				EB642FAB191CEBB4004A11FC /* NSString+MD5.m in Sources */,
+				EB8E1A9119149AE900788AAB /* main.m in Sources */,
+				EB0AC98B19169C53006FA6E0 /* SQHomeViewController.m in Sources */,
+				EB0AC99019169D70006FA6E0 /* SQGameViewController.m in Sources */,
+				EBDA0778191E4A1400D96E1C /* HLDocumentReaderViewController.m in Sources */,
+				EB0AC99519169D89006FA6E0 /* SQMineViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB8E1A9819149AE900788AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB8E1AAA19149AE900788AAB /* SQHealthLifeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB8E1AA219149AE900788AAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB8E1A8019149AE900788AAB /* SQHealthLife */;
+			targetProxy = EB8E1AA119149AE900788AAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB8E1A8D19149AE900788AAB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB8E1A8E19149AE900788AAB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EB8E1AA619149AE900788AAB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB8E1AA719149AE900788AAB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB8E1AAB19149AE900788AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB8E1AAC19149AE900788AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB8E1AAE19149AE900788AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					armv7s,
+					armv7,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SQHealthLife/Framework",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SQHealthLife/SQHealthLife-Prefix.pch";
+				INFOPLIST_FILE = "SQHealthLife/SQHealthLife-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EB8E1AAF19149AE900788AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					armv7s,
+					armv7,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SQHealthLife/Framework",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SQHealthLife/SQHealthLife-Prefix.pch";
+				INFOPLIST_FILE = "SQHealthLife/SQHealthLife-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EB8E1AB119149AE900788AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SQHealthLife.app/SQHealthLife";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SQHealthLife/SQHealthLife-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SQHealthLifeTests/SQHealthLifeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EB8E1AB219149AE900788AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SQHealthLife.app/SQHealthLife";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SQHealthLife/SQHealthLife-Prefix.pch";
+				INFOPLIST_FILE = "SQHealthLifeTests/SQHealthLifeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB8E1A7C19149AE900788AAB /* Build configuration list for PBXProject "SQHealthLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB8E1AAB19149AE900788AAB /* Debug */,
+				EB8E1AAC19149AE900788AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB8E1AAD19149AE900788AAB /* Build configuration list for PBXNativeTarget "SQHealthLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB8E1AAE19149AE900788AAB /* Debug */,
+				EB8E1AAF19149AE900788AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB8E1AB019149AE900788AAB /* Build configuration list for PBXNativeTarget "SQHealthLifeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB8E1AB119149AE900788AAB /* Debug */,
+				EB8E1AB219149AE900788AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB8E1A7919149AE900788AAB /* Project object */;
+}
