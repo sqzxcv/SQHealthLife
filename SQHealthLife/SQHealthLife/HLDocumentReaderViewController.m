@@ -30,16 +30,37 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = [[self.document allKeys] lastObject];
-    self.textView.text = [[self.document allValues] lastObject];
-    UIBarButtonItem *keepBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Keep", @"Keep") style:UIBarButtonItemStyleBordered target:self action:@selector(keepDocuments:)] autorelease];
-    UIBarButtonItem *goodBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Good", @"Good") style:UIBarButtonItemStyleBordered target:self action:@selector(goodDocument:)] autorelease];
+    self.title = [self.document objectForKey:kResourceTitle];
+    self.textView.text = [self.document objectForKey:kResourceContent];
+    
     UIBarButtonItem *flexibleSpace = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
     UIBarButtonItem *fixedSpace = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil] autorelease];
     fixedSpace.width = 10;
-    self.toolbarItems = @[fixedSpace, keepBtn, flexibleSpace, goodBtn, fixedSpace];
-    self.navigationController.toolbarHidden = NO;
+    BOOL exist = NO;
+    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:kFavoriteArticlesUserDefaultKey];
+    for (NSDictionary *document in arr)
+    {
+        if (YES == [self.document[kResourceID] isEqualToString:document[kResourceID]])
+        {
+            exist = YES;
+            break;
+        }
+    }
+    if (NO == exist)
+    {
+        UIBarButtonItem *keepBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Favorite", @"Favorite") style:UIBarButtonItemStyleBordered target:self action:@selector(favoriteDocuments:)] autorelease];
+        UIBarButtonItem *goodBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Good", @"Good") style:UIBarButtonItemStyleBordered target:self action:@selector(goodDocument:)] autorelease];
+        self.toolbarItems = @[fixedSpace, keepBtn, flexibleSpace, goodBtn, fixedSpace];
+    }
+    else
+    {
+        UIBarButtonItem *keepBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel Favorite", @"Cancel Favorite") style:UIBarButtonItemStyleBordered target:self action:@selector(deleteFromFavoriteDocuments:)] autorelease];
+        UIBarButtonItem *goodBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Good", @"Good") style:UIBarButtonItemStyleBordered target:self action:@selector(goodDocument:)] autorelease];
+        self.toolbarItems = @[fixedSpace, keepBtn, flexibleSpace, goodBtn, fixedSpace];
+    }
     
+    self.navigationController.toolbarHidden = NO;
+    self.navigationController.toolbar.tintColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,9 +88,51 @@
 
 #pragma mark - Actions method
 
-- (void) keepDocuments:(id) sender
+- (void) deleteFromFavoriteDocuments:(id) sender
 {
+    UIBarButtonItem *flexibleSpace = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
+    UIBarButtonItem *fixedSpace = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil] autorelease];
+    fixedSpace.width = 10;
+    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:kFavoriteArticlesUserDefaultKey];
+    NSDictionary *currentDoc = nil;
+    for (NSDictionary *document in arr)
+    {
+        if (YES == [self.document[kResourceID] isEqualToString:document[kResourceID]])
+        {
+            currentDoc = document;
+            break;
+        }
+    }
+    if (nil != currentDoc)
+    {
+        NSMutableArray *arrDoc = [NSMutableArray arrayWithArray:arr];
+        [arrDoc removeObject:currentDoc];
+        [[NSUserDefaults standardUserDefaults] setObject:arrDoc forKey:kFavoriteArticlesUserDefaultKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        UIBarButtonItem *keepBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel Favorite", @"Cancel Favorite") style:UIBarButtonItemStyleBordered target:self action:@selector(deleteFromFavoriteDocuments:)] autorelease];
+        UIBarButtonItem *goodBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Good", @"Good") style:UIBarButtonItemStyleBordered target:self action:@selector(goodDocument:)] autorelease];
+        self.toolbarItems = @[fixedSpace, keepBtn, flexibleSpace, goodBtn, fixedSpace];
+    }
+}
+
+- (void) favoriteDocuments:(id) sender
+{
+    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:kFavoriteArticlesUserDefaultKey];
+    if (nil == arr)
+    {
+        arr = [NSArray arrayWithObject:self.document];
+    }
+    else
+    {
+        arr = [arr arrayByAddingObject:self.document];
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:arr forKey:kFavoriteArticlesUserDefaultKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
+    UIBarButtonItem *keepBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel Favorite", @"Cancel Favorite") style:UIBarButtonItemStyleBordered target:self action:@selector(deleteFromFavoriteDocuments:)] autorelease];
+    UIBarButtonItem *flexibleSpace = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
+    self.toolbarItems = @[flexibleSpace, keepBtn, flexibleSpace];
 }
 
 - (void) goodDocument:(id) sender

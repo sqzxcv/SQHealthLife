@@ -42,5 +42,7 @@ typedef enum
 - (NSString *) seedsFullPath;
 
 - (NSString *) photosFullPath;
+//favorite
+- (NSString *) myPackage;
 
 @end

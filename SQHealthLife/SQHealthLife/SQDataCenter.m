@@ -154,7 +154,7 @@ NSString *const HLPhotosDidUpdateNotification = @"HLPhotosDidUpdateNotification"
         [fileManager removeItemAtPath:destPath error:nil];
     }
     
-    NSDictionary *resources = [NSDictionary dictionaryWithContentsOfFile:request.downloadDestinationPath];
+    NSArray *resources = [NSArray arrayWithContentsOfFile:request.downloadDestinationPath];
     if (nil == resources)
     {
         PAWarning(@"the %@ download from server is invalied, server's url is:%@", resourceKey, request.url);

@@ -38,13 +38,13 @@
     // Do any additional setup after loading the view from its nib.
     //添加转盘
     UIImageView *image_disk = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"disk.jpg"]];
-    image_disk.frame = CGRectMake(0.0, 0.0, 320.0, 320.0);
+    image_disk.frame = CGRectMake(0.0, 100.0, 320.0, 320.0);
     _wheelBkImageView = image_disk;
     [self.view addSubview:_wheelBkImageView];
     
     //添加转针
     UIImageView *image_start = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"start.png"]];
-    image_start.frame = CGRectMake(103.0, 55.0, 120.0, 210.0);
+    image_start.frame = CGRectMake(103.0, 155.0, 120.0, 210.0);
     _wheelPointerView = image_start;
     [self.view addSubview:_wheelPointerView];
     
@@ -54,6 +54,7 @@
     [btn_start setTitle:@"抽奖" forState:UIControlStateNormal];
     [btn_start addTarget:self action:@selector(choujiang) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn_start];
+    btn_start.center = image_start.center;
 }
 
 - (void)didReceiveMemoryWarning

@@ -43,6 +43,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.s
     self.delegate = self;
+    self.tabBar.tintColor = [UIColor blackColor];
 }
 
 -(void)viewDidAppear:(BOOL)animated

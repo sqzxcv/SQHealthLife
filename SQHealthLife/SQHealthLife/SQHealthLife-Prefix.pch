@@ -15,4 +15,5 @@
     #import <Foundation/Foundation.h>
     #import "const.h"
     #import <PAFoundation_iOS/PAFoundation_iOS.h>
+    #import "common.h"
 #endif

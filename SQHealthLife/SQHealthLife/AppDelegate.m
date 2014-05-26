@@ -39,6 +39,8 @@
 //        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 //    }
     
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    
     [self recievePushNotifyWithApplication:application WithOptions:launchOptions];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

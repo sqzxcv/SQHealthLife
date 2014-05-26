@@ -7,8 +7,15 @@
 //
 
 #import "SQMineViewController.h"
+#import "HLScoreViewController.h"
 
 @interface SQMineViewController ()
+<UITableViewDataSource,
+UITableViewDelegate>
+{
+    
+}
+@property (retain, nonatomic) IBOutlet UITableView *tableview;
 
 @end
 
@@ -29,6 +36,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.tableview.delegate = self;
+    self.tableview.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,5 +45,86 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)dealloc
+{
+    [_tableview release];
+    [super dealloc];
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 2;
+}
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return NSLocalizedString(@"Mine", @"Mine");
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *indentifier = @"defaultCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:indentifier];
+    if (nil == cell)
+    {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:indentifier] autorelease];
+    }
+    if (0 == indexPath.section)
+    {
+        switch (indexPath.row)
+        {
+            case 0:
+                cell.textLabel.text = NSLocalizedString(@"MineScores", @"");
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                break;
+            case 1:
+                cell.textLabel.text = NSLocalizedString(@"MyBookMark", @"");
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            default:
+                break;
+        }
+    }
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    UITableViewCell *cell = [tableView.visibleCells objectAtIndex:indexPath.row];
+//    HLDocumentReaderViewController *readerViewController = [[[HLDocumentReaderViewController alloc] init] autorelease];
+//    readerViewController.document = [NSDictionary dictionaryWithObject:[self.articles objectForKey:cell.textLabel.text] forKey:cell.textLabel.text];
+//    readerViewController.hidesBottomBarWhenPushed = YES;
+    
+    if (0 == indexPath.section)
+    {
+        switch (indexPath.row)
+        {
+                // score view
+            case 0:
+            {
+                HLScoreViewController *scoreViewController = [[[HLScoreViewController alloc] init] autorelease];
+                [self.navigationController pushViewController:scoreViewController animated:YES];
+                break;
+            }
+                // book mark.
+            case 1:
+            {
+                break;
+            }
+            default:
+                break;
+        }
+    }
+}
+
 
 @end
