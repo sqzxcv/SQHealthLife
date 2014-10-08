@@ -28,13 +28,13 @@ AdMoGoWebBrowserControllerUserDelegate>
 
 @implementation SQHomeViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id) init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self)
     {
-        // Custom initialization
         self.title = NSLocalizedString(@"Articles", @"Articles");
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(articlesDidUpdateNotification:) name:HLArticlesDidUpdateNotification object:nil];
     }
     return self;
 }
@@ -43,6 +43,8 @@ AdMoGoWebBrowserControllerUserDelegate>
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.tableView = [[UITableView alloc] init];
+    [self.view addSubview:self.tableView];
     self.articles = [NSArray arrayWithContentsOfFile:[[SQDataCenter shareDataCenter] articlesFullPath]];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -59,7 +61,7 @@ AdMoGoWebBrowserControllerUserDelegate>
                                                            options:0
                                                            metrics:nil
                                                              views:viewsDict];
-    arr = [arr arrayByAddingObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_tableView]-0-[_adView(44)]-0-|"
+    arr = [arr arrayByAddingObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-64-[_tableView]-0-[_adView(44)]-54-|"
                                                                                      options:0
                                                                                      metrics:nil
                                                                                        views:viewsDict]];
@@ -70,9 +72,8 @@ AdMoGoWebBrowserControllerUserDelegate>
     
     self.adView.translatesAutoresizingMaskIntoConstraints = NO;
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
-//    self.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addConstraints:arr];
-    [self.view setNeedsUpdateConstraints];
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -94,9 +95,16 @@ AdMoGoWebBrowserControllerUserDelegate>
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_articles release];
     [_tableView release];
     [super dealloc];
+}
+
+- (void) articlesDidUpdateNotification:(NSNotification *) noti
+{
+    self.articles = [NSArray arrayWithContentsOfFile:[[SQDataCenter shareDataCenter] articlesFullPath]];
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -115,7 +123,7 @@ AdMoGoWebBrowserControllerUserDelegate>
     }
     NSDictionary *article = self.articles[indexPath.row];
     cell.textLabel.text = article[kResourceTitle];
-    cell.detailTextLabel.text = article[kResourceType];
+    cell.detailTextLabel.text = NSLocalizedString(article[kResourceSubType], article[kResourceSubType]);
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }

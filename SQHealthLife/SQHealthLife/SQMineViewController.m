@@ -8,6 +8,7 @@
 
 #import "SQMineViewController.h"
 #import "HLScoreViewController.h"
+#import "HLMyFavoritesViewController.h"
 
 @interface SQMineViewController ()
 <UITableViewDataSource,
@@ -38,6 +39,12 @@ UITableViewDelegate>
     // Do any additional setup after loading the view from its nib.
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
+}
+
+- (void) viewWillAppear:(BOOL) animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setToolbarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,11 +106,6 @@ UITableViewDelegate>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    UITableViewCell *cell = [tableView.visibleCells objectAtIndex:indexPath.row];
-//    HLDocumentReaderViewController *readerViewController = [[[HLDocumentReaderViewController alloc] init] autorelease];
-//    readerViewController.document = [NSDictionary dictionaryWithObject:[self.articles objectForKey:cell.textLabel.text] forKey:cell.textLabel.text];
-//    readerViewController.hidesBottomBarWhenPushed = YES;
-    
     if (0 == indexPath.section)
     {
         switch (indexPath.row)
@@ -112,12 +114,17 @@ UITableViewDelegate>
             case 0:
             {
                 HLScoreViewController *scoreViewController = [[[HLScoreViewController alloc] init] autorelease];
+                scoreViewController.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:scoreViewController animated:YES];
                 break;
             }
-                // book mark.
+                // favorite.
             case 1:
             {
+                HLMyFavoritesViewController *favoriteViewController = [[[HLMyFavoritesViewController alloc] init] autorelease];
+                favoriteViewController.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:favoriteViewController animated:YES];
+//                [favoriteViewController release];
                 break;
             }
             default:

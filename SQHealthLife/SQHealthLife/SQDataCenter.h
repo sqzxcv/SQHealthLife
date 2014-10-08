@@ -14,16 +14,6 @@ extern NSString *const HLNovelsDidUpdateNotification;
 extern NSString *const HLSeedsDidUpdateNotification;
 extern NSString *const HLPhotosDidUpdateNotification;
 
-typedef enum
-{
-    HLResourceAddresses = 1,
-    HLResourceArticles = 2,
-    HLResourceJokes = 3,
-    HLResourceNovels = 4,
-    HLResourceSeeds = 5,
-    HLResourcePhotos = 6
-} HLResourceType;
-
 @interface SQDataCenter : NSObject
 
 + (SQDataCenter *) shareDataCenter;
@@ -42,7 +32,17 @@ typedef enum
 - (NSString *) seedsFullPath;
 
 - (NSString *) photosFullPath;
-//favorite
-- (NSString *) myPackage;
+
+- (NSString *) favoriteSeedsResourcesFullPath;
+
+- (NSString *) favoritePhotosResourcesFullPath;
+
+- (void) favoriteSeed:(NSDictionary *) seedItem;
+
+- (void) cancelFavoriteSeed:(NSDictionary *) seedItem;
+
+- (void) favoritePhoto:(NSDictionary *) photoItem;
+
+- (void) cancelFavoritePhoto:(NSDictionary *) photoItem;
 
 @end

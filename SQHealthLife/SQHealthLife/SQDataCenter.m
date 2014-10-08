@@ -29,7 +29,7 @@ NSString *const HLPhotosDidUpdateNotification = @"HLPhotosDidUpdateNotification"
 
 - (void) checkUpdateList
 {
-    [self getResourcesFromURL:kCheckUpdateListURL resourceType:HLResourceAddresses resourceInfo:nil];
+    [self getResourcesFromURL:kCheckUpdateListURL resourceType:nil resourceInfo:nil];
 }
 
 - (NSString *) downloadDictionaryTmpFolder
@@ -49,37 +49,52 @@ NSString *const HLPhotosDidUpdateNotification = @"HLPhotosDidUpdateNotification"
 
 - (NSString *) workspace
 {
-    return [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"workspace"];
+    return [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"Workspace"];
 }
 
 - (NSString *) articlesFullPath
 {
-    return [[[self workspace] stringByAppendingPathComponent:@"articles"] stringByAppendingPathComponent:@"articles.plist"];
+    return [[[self workspace] stringByAppendingPathComponent:@"Articles"] stringByAppendingPathComponent:@"Articles.plist"];
 }
 
 - (NSString *) jokesFullPath
 {
-    return [[[self workspace] stringByAppendingPathComponent:@"jokes"] stringByAppendingPathComponent:@"jokes.plist"];
+    return [[[self workspace] stringByAppendingPathComponent:@"Jokes"] stringByAppendingPathComponent:@"Jokes.plist"];
 }
 
 - (NSString *) novelsFullPath
 {
-    return [[[self workspace] stringByAppendingPathComponent:@"novels"] stringByAppendingPathComponent:@"novels.plist"];
+    return [[[self workspace] stringByAppendingPathComponent:@"Novels"] stringByAppendingPathComponent:@"Novels.plist"];
 }
 
 - (NSString *) seedsFullPath
 {
-    return [[self workspace] stringByAppendingPathComponent:@"seeds"];
+    return [[self workspace] stringByAppendingPathComponent:@"Seeds"];
 }
 
 - (NSString *) photosFullPath
 {
-    return [[self workspace] stringByAppendingPathComponent:@"photos"];
+    return [[self workspace] stringByAppendingPathComponent:@"Photos"];
+}
+
+- (NSString *) favoriteResourcesPath
+{
+    return [[self workspace] stringByAppendingPathComponent:@"Favorites"];
+}
+
+- (NSString *) favoriteSeedsResourcesFullPath
+{
+    return [[self favoriteResourcesPath] stringByAppendingPathComponent:@"Seeds"];
+}
+
+- (NSString *) favoritePhotosResourcesFullPath
+{
+    return [[self favoriteResourcesPath] stringByAppendingPathComponent:@"Photos"];
 }
 
 - (NSString *) localResourceVersionPath
 {
-    return [[self workspace] stringByAppendingPathComponent:@"localResourceVersionInfo"];
+    return [[self workspace] stringByAppendingPathComponent:@"LocalResourceVersionInfo"];
 }
 
 - (NSDictionary *) localResourcesVersionInfo
@@ -97,7 +112,7 @@ NSString *const HLPhotosDidUpdateNotification = @"HLPhotosDidUpdateNotification"
     [info writeToFile:[self localResourceVersionPath] atomically:YES];
 }
 
-- (void) getResourcesFromURL:(NSString *) urlString resourceType:(HLResourceType) resourceType resourceInfo:(NSObject *) info;
+- (void) getResourcesFromURL:(NSString *) urlString resourceType:(NSString *) resourceType resourceInfo:(NSObject *) info;
 {
     NSString *path = [self downloadDictionaryTmpFolder];
     NSString *downloadPath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",[NSString md5HashValueWithString:urlString]]];
@@ -116,11 +131,11 @@ NSString *const HLPhotosDidUpdateNotification = @"HLPhotosDidUpdateNotification"
     [self.downloadQueue addOperation:request];//添加到队列，队列启动后不需重新启动
     if (nil != info)
     {
-        request.userInfo = [NSDictionary dictionaryWithObjectsAndKeys:urlString,@"url", @(resourceType), @"resourceType", info, @"info", nil];
+        request.userInfo = [NSDictionary dictionaryWithObjectsAndKeys:urlString,@"url", resourceType, @"resourceType", info, @"info", nil];
     }
     else
     {
-        request.userInfo = [NSDictionary dictionaryWithObjectsAndKeys:urlString,@"url", @(resourceType), @"resourceType", nil];
+        request.userInfo = [NSDictionary dictionaryWithObjectsAndKeys:urlString,@"url", nil];
     }
 }
 
@@ -129,21 +144,25 @@ NSString *const HLPhotosDidUpdateNotification = @"HLPhotosDidUpdateNotification"
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *destPath = nil;
     NSString *resourceKey = nil;
-    int type = [[request.userInfo objectForKey:@"resourceType"] intValue];
-    if (HLResourceArticles == type)
+    NSString *type = request.userInfo[@"resourceType"];
+    NSString *notificationName = nil;
+    if ([type isEqualToString:kResourceArticleType])
     {
         destPath = [self articlesFullPath];
-        resourceKey = @"Articles";
+        resourceKey = kResourceArticleType;
+        notificationName = HLArticlesDidUpdateNotification;
     }
-    else if (HLResourceJokes == type)
+    else if ([type isEqualToString:kResourceJokeType])
     {
         destPath = [self jokesFullPath];
-        resourceKey = @"Jokes";
+        resourceKey = kResourceJokeType;
+        notificationName = HLJokesDidUpdateNotification;
     }
-    else if (HLResourceNovels == type)
+    else if ([type isEqualToString:kResourceNovelType])
     {
         destPath = [self novelsFullPath];
-        resourceKey = @"Novels";
+        resourceKey = kResourceNovelType;
+        notificationName = HLNovelsDidUpdateNotification;
     }
     else
     {
@@ -167,6 +186,7 @@ NSString *const HLPhotosDidUpdateNotification = @"HLPhotosDidUpdateNotification"
             NSMutableDictionary *localInfo = [NSMutableDictionary dictionaryWithDictionary:[self localResourcesVersionInfo]];
             [localInfo setObject:[request.userInfo objectForKey:@"info"] forKey:resourceKey];
             [self setLocalResourcesVersionInfo:localInfo];
+            [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:nil];
         }
         else
         {
@@ -180,17 +200,17 @@ NSString *const HLPhotosDidUpdateNotification = @"HLPhotosDidUpdateNotification"
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *destPath = nil;
     NSString *resourceKey = nil;
-    int type = [[request.userInfo objectForKey:@"resourceType"] intValue];
+    NSString *type = request.userInfo[@"resourceType"];
 
-    if (HLResourceSeeds == type)
+    if ([type isEqualToString:kResourceSeedType])
     {
         destPath = [self seedsFullPath];
-        resourceKey = @"Seeds";
+        resourceKey = kResourceSeedType;
     }
-    else if (HLResourcePhotos == type)
+    else if ([type isEqualToString:kResourcePhotoType])
     {
         destPath = [self photosFullPath];
-        resourceKey = @"Photos";
+        resourceKey = kResourcePhotoType;
     }
     
     if ([fileManager fileExistsAtPath:destPath])
@@ -210,114 +230,232 @@ NSString *const HLPhotosDidUpdateNotification = @"HLPhotosDidUpdateNotification"
     [self setLocalResourcesVersionInfo:localInfo];
 }
 
+- (void) favoriteSeed:(NSDictionary *) seedItem
+{
+    NSString *favoritePath = [self favoriteSeedsResourcesFullPath];
+    BOOL isDir = YES;
+    if ( !(YES == [[NSFileManager defaultManager] fileExistsAtPath:favoritePath isDirectory:&isDir] && isDir == YES))
+    {
+        NSError *err = nil;
+        if (NO == [[NSFileManager defaultManager] createDirectoryAtPath:favoritePath withIntermediateDirectories:YES attributes:nil error:&err])
+        {
+            PAError(@"create favorite seed folder failed with error:%@", err);
+            return;
+        }
+    }
+    
+    NSArray *allSeeds = seedItem[kResourceFilesTypeSeeds];
+    NSString *sourceRootPath = [self seedsFullPath];
+    NSString *destRootPath = [self favoriteSeedsResourcesFullPath];
+    NSError *err = nil;
+    for (NSString *path in allSeeds)
+    {
+        err = nil;
+        if (NO == [[NSFileManager defaultManager] copyItemAtPath:[sourceRootPath stringByAppendingPathComponent:path] toPath:[destRootPath stringByAppendingPathComponent:path] error:&err])
+        {
+            PAError(@"Copy seed file from %@ to %@ failed error:%@. the seed full info:\n", [sourceRootPath stringByAppendingPathComponent:path], [destRootPath stringByAppendingPathComponent:path], err, seedItem);
+        }
+    }
+    
+    NSArray *allImages = seedItem[kResourceFilesTypeImages];
+    for (NSString *path in allImages)
+    {
+        err = nil;
+        if (NO == [[NSFileManager defaultManager] copyItemAtPath:[sourceRootPath stringByAppendingPathComponent:path] toPath:[destRootPath stringByAppendingPathComponent:path] error:&err])
+        {
+            PAError(@"Copy image file from %@ to %@ failed error:%@. the seed full info:\n", [sourceRootPath stringByAppendingPathComponent:path], [destRootPath stringByAppendingPathComponent:path], err, seedItem);
+        }
+    }
+    [self saveItemInfoInUserDefault:seedItem];
+}
+
+- (void) cancelFavoriteSeed:(NSDictionary *) seedItem
+{
+    [self removeItemInfoFromUserDefault:seedItem];
+    NSArray *allSeeds = seedItem[kResourceFilesTypeSeeds];
+    NSString *destRootPath = [self favoriteSeedsResourcesFullPath];
+    for (NSString *path in allSeeds)
+    {
+        [[NSFileManager defaultManager] removeItemAtPath:[destRootPath stringByAppendingPathComponent:path] error:NULL];
+    }
+    
+    NSArray *allImages = seedItem[kResourceFilesTypeImages];
+    for (NSString *path in allImages)
+    {
+        [[NSFileManager defaultManager] removeItemAtPath:[destRootPath stringByAppendingPathComponent:path] error:NULL];
+    }
+}
+
+- (void) favoritePhoto:(NSDictionary *) photoItem
+{
+    NSString *favoritePath = [self favoritePhotosResourcesFullPath];
+    BOOL isDir = YES;
+    if ( !(YES == [[NSFileManager defaultManager] fileExistsAtPath:favoritePath isDirectory:&isDir] && isDir == YES))
+    {
+        NSError *err = nil;
+        if (NO == [[NSFileManager defaultManager] createDirectoryAtPath:favoritePath withIntermediateDirectories:YES attributes:nil error:&err])
+        {
+            PAError(@"create favorite photo folder failed with error:%@", err);
+            return;
+        }
+    }
+    
+    NSString *sourceRootPath = [self seedsFullPath];
+    NSString *destRootPath = [self favoriteSeedsResourcesFullPath];
+    NSError *err = nil;
+    NSArray *allImages = photoItem[kResourceFilesTypeImages];
+    for (NSString *path in allImages)
+    {
+        err = nil;
+        if (NO == [[NSFileManager defaultManager] copyItemAtPath:[sourceRootPath stringByAppendingPathComponent:path] toPath:[destRootPath stringByAppendingPathComponent:path] error:&err])
+        {
+            PAError(@"Copy image file from %@ to %@ failed error:%@. the seed full info:\n", [sourceRootPath stringByAppendingPathComponent:path], [destRootPath stringByAppendingPathComponent:path], err, photoItem);
+        }
+    }
+    [self saveItemInfoInUserDefault:photoItem];
+
+}
+
+- (void) cancelFavoritePhoto:(NSDictionary *) photoItem
+{
+    [self removeItemInfoFromUserDefault:photoItem];
+    NSString *destRootPath = [self favoriteSeedsResourcesFullPath];
+    NSArray *allImages = photoItem[kResourceFilesTypeImages];
+    for (NSString *path in allImages)
+    {
+        [[NSFileManager defaultManager] removeItemAtPath:[destRootPath stringByAppendingPathComponent:path] error:NULL];
+    }
+}
+
+- (void) saveItemInfoInUserDefault:(NSDictionary *) itemInfo
+{
+    NSDictionary *allFavorites = [[NSUserDefaults standardUserDefaults] objectForKey:kFavoriteResourcesUserDefaultKey];
+    if (nil == allFavorites)
+    {
+        allFavorites = @{[@([[NSDate date] timeIntervalSince1970]) stringValue]: itemInfo};
+    }
+    else
+    {
+        NSMutableDictionary *resultFavorites = [NSMutableDictionary dictionaryWithDictionary:allFavorites];
+        [resultFavorites setObject:itemInfo forKey:[@([[NSDate date] timeIntervalSince1970]) stringValue]];
+        allFavorites = resultFavorites;
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:allFavorites forKey:kFavoriteResourcesUserDefaultKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
+
+- (void) removeItemInfoFromUserDefault:(NSDictionary *) itemInfo
+{
+    NSDictionary *allFavorite = [[NSUserDefaults standardUserDefaults] objectForKey:kFavoriteResourcesUserDefaultKey];
+    NSArray *arr = [allFavorite allValues];
+    NSDictionary *currentDoc = nil;
+    for (NSDictionary *document in arr)
+    {
+        if (YES == [itemInfo[kResourceID] isEqualToString:document[kResourceID]])
+        {
+            currentDoc = document;
+            break;
+        }
+    }
+    if (nil != currentDoc)
+    {
+        NSArray *relativeKeys = [allFavorite allKeysForObject:currentDoc];
+        NSMutableDictionary *resultAllFavorites = [NSMutableDictionary dictionaryWithDictionary:allFavorite];
+        [resultAllFavorites removeObjectsForKeys:relativeKeys];
+        [[NSUserDefaults standardUserDefaults] setObject:resultAllFavorites forKey:kFavoriteResourcesUserDefaultKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+}
+
+
 #pragma mark - ASIHTTPRequestDelegate:
 
 - (void) requestStarted:(ASIHTTPRequest *) request
 {
-    int flag = [[request.userInfo objectForKey:@"resourceType"] intValue];
-    if (HLResourceAddresses == flag)
-    {
-    }
-    else if (HLResourceArticles == flag)
-    {
-        
-    }
-    else if (HLResourcePhotos == flag)
-    {
-        
-    }
-    else if (HLResourceJokes == flag)
-    {
-        
-    }
-    else if (HLResourceNovels == flag)
-    {
-        
-    }
-    else if (HLResourceSeeds == flag)
-    {
-        
-    }
 }
 
 - (void) requestFinished:(ASIHTTPRequest *)request
 {
-    int flag = [[request.userInfo objectForKey:@"resourceType"] intValue];
-    if (HLResourceAddresses == flag)
+    NSString *type = request.userInfo[@"resourceType"];
+    
+    if ([type isEqualToString:kResourceArticleType] ||
+        [type isEqualToString:kResourceJokeType] ||
+        [type isEqualToString:kResourceNovelType])
     {
+        [self saveStringResourceFromRequest:request];
+    }
+    else if ([type isEqualToString:kResourceSeedType] ||
+             [type isEqualToString:kResourcePhotoType])
+    {
+        [self saveZipResourceFromRequest:request];
+    }
+    else if (type == nil)
+    {
+        // 如果没有type 则说明是check update list。
         NSDictionary *info = [NSDictionary dictionaryWithContentsOfFile:request.downloadDestinationPath];
         if (nil == info)
         {
             PAError(@"the resourceVersionInfo from server is invalid!");
             return;
         }
-        PAInfo(@"get new version Info:\n", info);
+        PAInfo(@"get new version Info:\n%@", info);
         NSDictionary *localInfo = [self localResourcesVersionInfo];
         // check Articles
-        NSDictionary *articles = [info objectForKey:@"Articles"];
+        NSDictionary *articles = [info objectForKey:kResourceArticleType];
         NSString *newArticles = [[articles allKeys] lastObject];
-        NSString *oldArticles = [[[localInfo objectForKey:@"Articles"] allKeys] lastObject];
+        NSString *oldArticles = [[[localInfo objectForKey:kResourceArticleType] allKeys] lastObject];
         if (NO == [newArticles isEqualToString:oldArticles])
         {
             NSString *url = [articles objectForKey:newArticles];
             PAInfo(@"Articles did update on server, version:%@", newArticles);
-            [self getResourcesFromURL:url resourceType:HLResourceArticles resourceInfo:articles];
+            [self getResourcesFromURL:url resourceType:kResourceArticleType resourceInfo:articles];
         }
         
         // check Jokes
-        NSDictionary *jokes = [info objectForKey:@"Jokes"];
+        NSDictionary *jokes = info[kResourceJokeType];
         NSString *newJokes = [[jokes allKeys] lastObject];
-        NSString *oldJokes = [[[localInfo objectForKey:@"Jokes"] allKeys] lastObject];
+        NSString *oldJokes = [[localInfo[kResourceJokeType] allKeys] lastObject];
         if (NO == [newJokes isEqualToString:oldJokes])
         {
             NSString *url = [jokes objectForKey:newJokes];
             PAInfo(@"Jokes did update on server, version:%@", newJokes);
-            [self getResourcesFromURL:url resourceType:HLResourceJokes resourceInfo:jokes];
+            [self getResourcesFromURL:url resourceType:kResourceJokeType resourceInfo:jokes];
         }
         
         // check Novels
-        NSDictionary *novels = [info objectForKey:@"Novels"];
+        NSDictionary *novels = info[kResourceNovelType];
         NSString *newNovels = [[novels allKeys] lastObject];
-        NSString *oldNovels = [[[localInfo objectForKey:@"Novels"] allKeys] lastObject];
+        NSString *oldNovels = [[localInfo[kResourceNovelType] allKeys] lastObject];
         if (NO == [newNovels isEqualToString:oldNovels])
         {
             NSString *url = [novels objectForKey:newNovels];
             PAInfo(@"Novels did update on server, version:%@", newNovels);
-            [self getResourcesFromURL:url resourceType:HLResourceNovels resourceInfo:novels];
+            [self getResourcesFromURL:url resourceType:kResourceNovelType resourceInfo:novels];
         }
         
         // check seeds
-        NSDictionary *seeds = [info objectForKey:@"Seeds"];
+        NSDictionary *seeds = info[kResourceSeedType];
         NSString *newSeeds = [[seeds allKeys] lastObject];
-        NSString *oldSeeds = [[[localInfo objectForKey:@"Seeds"] allKeys] lastObject];
+        NSString *oldSeeds = [[localInfo[kResourceSeedType] allKeys] lastObject];
         if (NO == [newSeeds isEqualToString:oldSeeds])
         {
             NSString *url = [seeds objectForKey:newSeeds];
             PAInfo(@"Seeds did update on server, version:%@", newSeeds);
-            [self getResourcesFromURL:url resourceType:HLResourceSeeds resourceInfo:seeds];
+            [self getResourcesFromURL:url resourceType:kResourceSeedType resourceInfo:seeds];
         }
         
         // check photos
-        NSDictionary *photos = [info objectForKey:@"Photos"];
+        NSDictionary *photos = info[kResourcePhotoType];
         NSString *newPhotos = [[photos allKeys] lastObject];
-        NSString *oldPhotos = [[[localInfo objectForKey:@"Photos"] allKeys] lastObject];
+        NSString *oldPhotos = [[localInfo[kResourcePhotoType] allKeys] lastObject];
         if (NO == [newPhotos isEqualToString:oldPhotos])
         {
             NSString *url = [photos objectForKey:newPhotos];
             PAInfo(@"Photos did update on server, version:%@", newPhotos);
-            [self getResourcesFromURL:url resourceType:HLResourcePhotos resourceInfo:photos];
+            [self getResourcesFromURL:url resourceType:kResourcePhotoType resourceInfo:photos];
         }
-    }
-    else if (HLResourceArticles == flag ||
-             HLResourceNovels == flag ||
-             HLResourceJokes == flag)
-    {
-        [self saveStringResourceFromRequest:request];
-    }
-    else if (HLResourceSeeds == flag ||  
-             HLResourcePhotos == flag)
-    {
-        [self saveZipResourceFromRequest:request];
     }
 }
 

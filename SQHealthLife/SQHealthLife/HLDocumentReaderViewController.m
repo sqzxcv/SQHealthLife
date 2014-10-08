@@ -37,7 +37,8 @@
     UIBarButtonItem *fixedSpace = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil] autorelease];
     fixedSpace.width = 10;
     BOOL exist = NO;
-    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:kFavoriteArticlesUserDefaultKey];
+    NSDictionary *allFavorites = [[NSUserDefaults standardUserDefaults] objectForKey:kFavoriteResourcesUserDefaultKey];
+    NSArray *arr = [allFavorites allValues];
     for (NSDictionary *document in arr)
     {
         if (YES == [self.document[kResourceID] isEqualToString:document[kResourceID]])
@@ -55,8 +56,8 @@
     else
     {
         UIBarButtonItem *keepBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel Favorite", @"Cancel Favorite") style:UIBarButtonItemStyleBordered target:self action:@selector(deleteFromFavoriteDocuments:)] autorelease];
-        UIBarButtonItem *goodBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Good", @"Good") style:UIBarButtonItemStyleBordered target:self action:@selector(goodDocument:)] autorelease];
-        self.toolbarItems = @[fixedSpace, keepBtn, flexibleSpace, goodBtn, fixedSpace];
+        self.toolbarItems = @[flexibleSpace, keepBtn, flexibleSpace];
+
     }
     
     self.navigationController.toolbarHidden = NO;
@@ -93,7 +94,8 @@
     UIBarButtonItem *flexibleSpace = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
     UIBarButtonItem *fixedSpace = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil] autorelease];
     fixedSpace.width = 10;
-    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:kFavoriteArticlesUserDefaultKey];
+    NSDictionary *allFavorite = [[NSUserDefaults standardUserDefaults] objectForKey:kFavoriteResourcesUserDefaultKey];
+    NSArray *arr = [allFavorite allValues];
     NSDictionary *currentDoc = nil;
     for (NSDictionary *document in arr)
     {
@@ -105,12 +107,13 @@
     }
     if (nil != currentDoc)
     {
-        NSMutableArray *arrDoc = [NSMutableArray arrayWithArray:arr];
-        [arrDoc removeObject:currentDoc];
-        [[NSUserDefaults standardUserDefaults] setObject:arrDoc forKey:kFavoriteArticlesUserDefaultKey];
+        NSArray *relativeKeys = [allFavorite allKeysForObject:currentDoc];
+        NSMutableDictionary *resultAllFavorites = [NSMutableDictionary dictionaryWithDictionary:allFavorite];
+        [resultAllFavorites removeObjectsForKeys:relativeKeys];
+        [[NSUserDefaults standardUserDefaults] setObject:resultAllFavorites forKey:kFavoriteResourcesUserDefaultKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
-        UIBarButtonItem *keepBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel Favorite", @"Cancel Favorite") style:UIBarButtonItemStyleBordered target:self action:@selector(deleteFromFavoriteDocuments:)] autorelease];
+        UIBarButtonItem *keepBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Favorite", @"Favorite") style:UIBarButtonItemStyleBordered target:self action:@selector(favoriteDocuments:)] autorelease];
         UIBarButtonItem *goodBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Good", @"Good") style:UIBarButtonItemStyleBordered target:self action:@selector(goodDocument:)] autorelease];
         self.toolbarItems = @[fixedSpace, keepBtn, flexibleSpace, goodBtn, fixedSpace];
     }
@@ -118,16 +121,18 @@
 
 - (void) favoriteDocuments:(id) sender
 {
-    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:kFavoriteArticlesUserDefaultKey];
-    if (nil == arr)
+    NSDictionary *allFavorites = [[NSUserDefaults standardUserDefaults] objectForKey:kFavoriteResourcesUserDefaultKey];
+    if (nil == allFavorites)
     {
-        arr = [NSArray arrayWithObject:self.document];
+        allFavorites = @{[@([[NSDate date] timeIntervalSince1970]) stringValue]: self.document};
     }
     else
     {
-        arr = [arr arrayByAddingObject:self.document];
+        NSMutableDictionary *resultFavorites = [NSMutableDictionary dictionaryWithDictionary:allFavorites];
+        [resultFavorites setObject:self.document forKey:[@([[NSDate date] timeIntervalSince1970]) stringValue]];
+        allFavorites = resultFavorites;
     }
-    [[NSUserDefaults standardUserDefaults] setObject:arr forKey:kFavoriteArticlesUserDefaultKey];
+    [[NSUserDefaults standardUserDefaults] setObject:allFavorites forKey:kFavoriteResourcesUserDefaultKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     UIBarButtonItem *keepBtn = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel Favorite", @"Cancel Favorite") style:UIBarButtonItemStyleBordered target:self action:@selector(deleteFromFavoriteDocuments:)] autorelease];

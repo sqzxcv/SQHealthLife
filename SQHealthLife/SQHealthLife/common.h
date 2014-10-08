@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-#define kResourceTitle @"title"
-#define kResourceContent @"content"
-#define kResourceType @"type"
-#define kResourceID @"id"
+#define kResourceTitle @"Title"
+#define kResourceContent @"Content"
+#define kResourceType @"Type" // contain SeedType, ArticleType, PhotoType, JokeType, NovelType.
+#define kResourceArticleType @"ArticleType"
+#define kResourceJokeType @"JokeType"
+#define kResourceNovelType @"NovelType"
+#define kResourcePhotoType @"PhotoType"
+#define kResourceSeedType @"SeedType"
 
-#define kFavoriteArticlesUserDefaultKey @"kFavoriteArticlesUserDefaultKey"
+#define kResourceSubType @"SubType"
+#define kResourceID @"Id"
+
+#define kResourceFilesTypeImages @"Images"
+#define kResourceFilesTypeSeeds @"Seeds"
+
+#define kFavoriteResourcesUserDefaultKey @"kFavoriteResourcesUserDefaultKey"

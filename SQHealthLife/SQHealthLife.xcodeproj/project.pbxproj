@@ -111,10 +111,16 @@
 		EB513A2E19278CA90051F82D /* DomobOfferWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EB513A2B19278CA90051F82D /* DomobOfferWallBundle.bundle */; };
 		EB513A2F19278CA90051F82D /* libDomobOfferWallSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB513A2C19278CA90051F82D /* libDomobOfferWallSDK.a */; };
 		EB513A32192794B40051F82D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB513A30192794B40051F82D /* Localizable.strings */; };
-		EB513A331927951B0051F82D /* SQHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB513A351927951B0051F82D /* SQHomeViewController.xib */; };
 		EB513A45192798850051F82D /* HLScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB513A43192798850051F82D /* HLScoreViewController.m */; };
 		EB513A46192798850051F82D /* HLScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB513A44192798850051F82D /* HLScoreViewController.xib */; };
 		EB513A4C192A7DD60051F82D /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = EB513A4B192A7DD60051F82D /* common.m */; };
+		EB5B41B81939E9580081C57E /* HLImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5B41B71939E9580081C57E /* HLImageBrowserViewController.m */; };
+		EB5C9E8519364729009EC1FE /* KTPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EB5C9E7719364729009EC1FE /* KTPhotoBrowser.bundle */; };
+		EB5C9E8619364729009EC1FE /* KTPhotoBrowserGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5C9E7A19364729009EC1FE /* KTPhotoBrowserGlobal.m */; };
+		EB5C9E8719364729009EC1FE /* KTPhotoScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5C9E7C19364729009EC1FE /* KTPhotoScrollViewController.m */; };
+		EB5C9E8819364729009EC1FE /* KTPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5C9E7E19364729009EC1FE /* KTPhotoView.m */; };
+		EB5C9E8E19364772009EC1FE /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5C9E8D19364772009EC1FE /* iCarousel.m */; };
+		EB5C9E9119364FE2009EC1FE /* HLMyFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5C9E9019364FE2009EC1FE /* HLMyFavoritesViewController.m */; };
 		EB642FAB191CEBB4004A11FC /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = EB642FAA191CEBB4004A11FC /* NSString+MD5.m */; };
 		EB8E1A8519149AE900788AAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8E1A8419149AE900788AAB /* Foundation.framework */; };
 		EB8E1A8719149AE900788AAB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8E1A8619149AE900788AAB /* CoreGraphics.framework */; };
@@ -342,7 +348,6 @@
 		EB513A2B19278CA90051F82D /* DomobOfferWallBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobOfferWallBundle.bundle; sourceTree = "<group>"; };
 		EB513A2C19278CA90051F82D /* libDomobOfferWallSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDomobOfferWallSDK.a; sourceTree = "<group>"; };
 		EB513A31192794B40051F82D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EB513A341927951B0051F82D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SQHomeViewController.xib; sourceTree = "<group>"; };
 		EB513A361927956F0051F82D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EB513A371927956F0051F82D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EB513A381927956F0051F82D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -357,6 +362,20 @@
 		EB513A44192798850051F82D /* HLScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLScoreViewController.xib; sourceTree = "<group>"; };
 		EB513A4A192A7DD60051F82D /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		EB513A4B192A7DD60051F82D /* common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
+		EB5B41B61939E9580081C57E /* HLImageBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLImageBrowserViewController.h; sourceTree = "<group>"; };
+		EB5B41B71939E9580081C57E /* HLImageBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLImageBrowserViewController.m; sourceTree = "<group>"; };
+		EB5C9E7719364729009EC1FE /* KTPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KTPhotoBrowser.bundle; sourceTree = "<group>"; };
+		EB5C9E7819364729009EC1FE /* KTPhotoBrowserDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPhotoBrowserDataSource.h; sourceTree = "<group>"; };
+		EB5C9E7919364729009EC1FE /* KTPhotoBrowserGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPhotoBrowserGlobal.h; sourceTree = "<group>"; };
+		EB5C9E7A19364729009EC1FE /* KTPhotoBrowserGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPhotoBrowserGlobal.m; sourceTree = "<group>"; };
+		EB5C9E7B19364729009EC1FE /* KTPhotoScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPhotoScrollViewController.h; sourceTree = "<group>"; };
+		EB5C9E7C19364729009EC1FE /* KTPhotoScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPhotoScrollViewController.m; sourceTree = "<group>"; };
+		EB5C9E7D19364729009EC1FE /* KTPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPhotoView.h; sourceTree = "<group>"; };
+		EB5C9E7E19364729009EC1FE /* KTPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPhotoView.m; sourceTree = "<group>"; };
+		EB5C9E8C19364772009EC1FE /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		EB5C9E8D19364772009EC1FE /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		EB5C9E8F19364FE2009EC1FE /* HLMyFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMyFavoritesViewController.h; sourceTree = "<group>"; };
+		EB5C9E9019364FE2009EC1FE /* HLMyFavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMyFavoritesViewController.m; sourceTree = "<group>"; };
 		EB642FA9191CEBB4004A11FC /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		EB642FAA191CEBB4004A11FC /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		EB8E1A8119149AE900788AAB /* SQHealthLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQHealthLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -602,24 +621,25 @@
 		EB0AC9971916A562006FA6E0 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				EB5C9E75193646FA009EC1FE /* ImageBrowser */,
 				EB8E1AB319154D0C00788AAB /* HMMainViewController.h */,
 				EB8E1AB419154D0C00788AAB /* HMMainViewController.m */,
 				EB0AC98819169C53006FA6E0 /* SQHomeViewController.h */,
 				EB0AC98919169C53006FA6E0 /* SQHomeViewController.m */,
-				EB513A351927951B0051F82D /* SQHomeViewController.xib */,
 				EB0AC98D19169D70006FA6E0 /* SQGameViewController.h */,
 				EB0AC98E19169D70006FA6E0 /* SQGameViewController.m */,
 				EB0AC98F19169D70006FA6E0 /* SQGameViewController.xib */,
 				EB0AC99219169D89006FA6E0 /* SQMineViewController.h */,
 				EB0AC99319169D89006FA6E0 /* SQMineViewController.m */,
 				EB0AC99419169D89006FA6E0 /* SQMineViewController.xib */,
-				EB0AC9981916A599006FA6E0 /* BusinessLogic */,
 				EBDA0775191E4A1400D96E1C /* HLDocumentReaderViewController.h */,
 				EBDA0776191E4A1400D96E1C /* HLDocumentReaderViewController.m */,
 				EBDA0777191E4A1400D96E1C /* HLDocumentReaderViewController.xib */,
 				EB513A42192798850051F82D /* HLScoreViewController.h */,
 				EB513A43192798850051F82D /* HLScoreViewController.m */,
 				EB513A44192798850051F82D /* HLScoreViewController.xib */,
+				EB5C9E8F19364FE2009EC1FE /* HLMyFavoritesViewController.h */,
+				EB5C9E9019364FE2009EC1FE /* HLMyFavoritesViewController.m */,
 			);
 			name = UserInterface;
 			sourceTree = "<group>";
@@ -979,6 +999,33 @@
 			path = DomobOfferWallBundle;
 			sourceTree = "<group>";
 		};
+		EB5C9E75193646FA009EC1FE /* ImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				EB5B41B61939E9580081C57E /* HLImageBrowserViewController.h */,
+				EB5B41B71939E9580081C57E /* HLImageBrowserViewController.m */,
+				EB5C9E8C19364772009EC1FE /* iCarousel.h */,
+				EB5C9E8D19364772009EC1FE /* iCarousel.m */,
+				EB5C9E7619364729009EC1FE /* KTPhotoBrowser */,
+			);
+			name = ImageBrowser;
+			sourceTree = "<group>";
+		};
+		EB5C9E7619364729009EC1FE /* KTPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				EB5C9E7719364729009EC1FE /* KTPhotoBrowser.bundle */,
+				EB5C9E7819364729009EC1FE /* KTPhotoBrowserDataSource.h */,
+				EB5C9E7919364729009EC1FE /* KTPhotoBrowserGlobal.h */,
+				EB5C9E7A19364729009EC1FE /* KTPhotoBrowserGlobal.m */,
+				EB5C9E7B19364729009EC1FE /* KTPhotoScrollViewController.h */,
+				EB5C9E7C19364729009EC1FE /* KTPhotoScrollViewController.m */,
+				EB5C9E7D19364729009EC1FE /* KTPhotoView.h */,
+				EB5C9E7E19364729009EC1FE /* KTPhotoView.m */,
+			);
+			path = KTPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		EB8E1A7819149AE900788AAB = {
 			isa = PBXGroup;
 			children = (
@@ -1036,9 +1083,10 @@
 			children = (
 				EB5135B61927861D0051F82D /* WalkSDK */,
 				EBDA07E21925233400D96E1C /* ADSDK */,
+				EB0AC9971916A562006FA6E0 /* UserInterface */,
+				EB0AC9981916A599006FA6E0 /* BusinessLogic */,
 				EB642FA9191CEBB4004A11FC /* NSString+MD5.h */,
 				EB642FAA191CEBB4004A11FC /* NSString+MD5.m */,
-				EB0AC9971916A562006FA6E0 /* UserInterface */,
 				EB8E1AB919154F0B00788AAB /* const.h */,
 				EB513A4A192A7DD60051F82D /* common.h */,
 				EB513A4B192A7DD60051F82D /* common.m */,
@@ -1563,7 +1611,6 @@
 				EB51357519277E860051F82D /* webview_bar_close_hover@2x.png in Resources */,
 				EB0AC99119169D70006FA6E0 /* SQGameViewController.xib in Resources */,
 				EBDA084F1925233400D96E1C /* AdMoGoWebBrowser.xib in Resources */,
-				EB513A331927951B0051F82D /* SQHomeViewController.xib in Resources */,
 				EB51356519277E860051F82D /* website-728x90.gif in Resources */,
 				EB5135A019277E860051F82D /* webview_bar_pause.png in Resources */,
 				EB51358619277E860051F82D /* webview_bar_refresh_ipad@2x.png in Resources */,
@@ -1605,6 +1652,7 @@
 				EB51358219277E860051F82D /* webview_bar_close_ipad@2x.png in Resources */,
 				EB51355919277E860051F82D /* adsmogo_rm_closeBtn.png in Resources */,
 				EB51357619277E860051F82D /* webview_bar_next@2x.png in Resources */,
+				EB5C9E8519364729009EC1FE /* KTPhotoBrowser.bundle in Resources */,
 				EB513A1419278BC50051F82D /* baidumobadwallsdk.bundle in Resources */,
 				EB8E1A9719149AE900788AAB /* Images.xcassets in Resources */,
 				EB51357919277E860051F82D /* webview_bar_pause@2x.png in Resources */,
@@ -1636,8 +1684,10 @@
 				EBDA085B1925233500D96E1C /* CFilteringJSONSerializer.m in Sources */,
 				EBDAA6961917D9600098E0DB /* SQDataCenter.m in Sources */,
 				EBDA08631925233500D96E1C /* CJSONSerializer.m in Sources */,
+				EB5C9E9119364FE2009EC1FE /* HLMyFavoritesViewController.m in Sources */,
 				EBDA08871925267800D96E1C /* AdMoGoAdapterDoMob.m in Sources */,
 				EB8E1AB519154D0C00788AAB /* HMMainViewController.m in Sources */,
+				EB5B41B81939E9580081C57E /* HLImageBrowserViewController.m in Sources */,
 				EBDA085C1925233500D96E1C /* CJSONDeserializer_BlocksExtensions.m in Sources */,
 				EBDA085E1925233500D96E1C /* CJSONSerializedData.m in Sources */,
 				EB8E1A9519149AE900788AAB /* AppDelegate.m in Sources */,
@@ -1645,13 +1695,17 @@
 				EBDA08591925233500D96E1C /* OpenUDID.m in Sources */,
 				EB513A1319278BC50051F82D /* AdsMogoNetworkBaiDuAdapter.m in Sources */,
 				EB642FAB191CEBB4004A11FC /* NSString+MD5.m in Sources */,
+				EB5C9E8E19364772009EC1FE /* iCarousel.m in Sources */,
 				EB8E1A9119149AE900788AAB /* main.m in Sources */,
 				EBDA08A41925288200D96E1C /* AdMoGoAdapterDGTMob.m in Sources */,
+				EB5C9E8819364729009EC1FE /* KTPhotoView.m in Sources */,
 				EB0AC98B19169C53006FA6E0 /* SQHomeViewController.m in Sources */,
 				EB5139EC19278BA60051F82D /* AdsMogoNetworkYouMiAdapter.m in Sources */,
 				EBDA08651925233500D96E1C /* mztools.c in Sources */,
 				EBDA08531925233400D96E1C /* AdMoGoAdapterBaiduFullAds.m in Sources */,
 				EBDA08621925233500D96E1C /* CJSONScanner.m in Sources */,
+				EB5C9E8619364729009EC1FE /* KTPhotoBrowserGlobal.m in Sources */,
+				EB5C9E8719364729009EC1FE /* KTPhotoScrollViewController.m in Sources */,
 				EB0AC99019169D70006FA6E0 /* SQGameViewController.m in Sources */,
 				EBDA08601925233500D96E1C /* NSDictionary_JSONExtensions.m in Sources */,
 				EBDA0778191E4A1400D96E1C /* HLDocumentReaderViewController.m in Sources */,
@@ -1703,14 +1757,6 @@
 				EB513A3C192795970051F82D /* ja */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		EB513A351927951B0051F82D /* SQHomeViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EB513A341927951B0051F82D /* en */,
-			);
-			name = SQHomeViewController.xib;
 			sourceTree = "<group>";
 		};
 		EB8E1A8D19149AE900788AAB /* InfoPlist.strings */ = {

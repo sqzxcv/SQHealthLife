@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBC0772619339D3900C39F83 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC0772519339D3900C39F83 /* Cocoa.framework */; };
+		EBC0773019339D3900C39F83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBC0772E19339D3900C39F83 /* InfoPlist.strings */; };
+		EBC0773219339D3900C39F83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC0773119339D3900C39F83 /* main.m */; };
+		EBC0773619339D3900C39F83 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EBC0773419339D3900C39F83 /* Credits.rtf */; };
+		EBC0773919339D3900C39F83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC0773819339D3900C39F83 /* AppDelegate.m */; };
+		EBC0773C19339D3900C39F83 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC0773A19339D3900C39F83 /* MainMenu.xib */; };
+		EBC0773E19339D3900C39F83 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC0773D19339D3900C39F83 /* Images.xcassets */; };
+		EBC0774519339D3900C39F83 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC0774419339D3900C39F83 /* XCTest.framework */; };
+		EBC0774619339D3900C39F83 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC0772519339D3900C39F83 /* Cocoa.framework */; };
+		EBC0774E19339D3900C39F83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBC0774C19339D3900C39F83 /* InfoPlist.strings */; };
+		EBC0775019339D3900C39F83 /* HealthLifeDataGenerateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC0774F19339D3900C39F83 /* HealthLifeDataGenerateTests.m */; };
+		EBC0775F19339FBC00C39F83 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC0775D19339FBC00C39F83 /* BaseViewController.m */; };
+		EBC0776019339FBC00C39F83 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC0775E19339FBC00C39F83 /* BaseViewController.xib */; };
+		EBC077651933AEB400C39F83 /* NSData+EncodeData.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC077641933AEB400C39F83 /* NSData+EncodeData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EBC077681933AF5000C39F83 /* SSCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC077671933AF5000C39F83 /* SSCrypto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EBC077BA1933B01600C39F83 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EBC0776B1933B01600C39F83 /* LICENSE */; };
+		EBC077BB1933B01600C39F83 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC077B81933B01600C39F83 /* libcrypto.a */; };
+		EBC077BC1933B01600C39F83 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC077B91933B01600C39F83 /* libssl.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBC0774719339D3900C39F83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBC0771A19339D3900C39F83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBC0772119339D3900C39F83;
+			remoteInfo = HealthLifeDataGenerate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBC0772219339D3900C39F83 /* HealthLifeDataGenerate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthLifeDataGenerate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC0772519339D3900C39F83 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EBC0772819339D3900C39F83 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		EBC0772919339D3900C39F83 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EBC0772A19339D3900C39F83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EBC0772D19339D3900C39F83 /* HealthLifeDataGenerate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HealthLifeDataGenerate-Info.plist"; sourceTree = "<group>"; };
+		EBC0772F19339D3900C39F83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EBC0773119339D3900C39F83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBC0773319339D3900C39F83 /* HealthLifeDataGenerate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HealthLifeDataGenerate-Prefix.pch"; sourceTree = "<group>"; };
+		EBC0773519339D3900C39F83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		EBC0773719339D3900C39F83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EBC0773819339D3900C39F83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EBC0773B19339D3900C39F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EBC0773D19339D3900C39F83 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBC0774319339D3900C39F83 /* HealthLifeDataGenerateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthLifeDataGenerateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC0774419339D3900C39F83 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EBC0774B19339D3900C39F83 /* HealthLifeDataGenerateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HealthLifeDataGenerateTests-Info.plist"; sourceTree = "<group>"; };
+		EBC0774D19339D3900C39F83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EBC0774F19339D3900C39F83 /* HealthLifeDataGenerateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthLifeDataGenerateTests.m; sourceTree = "<group>"; };
+		EBC0775C19339FBC00C39F83 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		EBC0775D19339FBC00C39F83 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		EBC0775E19339FBC00C39F83 /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		EBC077631933AEB400C39F83 /* NSData+EncodeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+EncodeData.h"; sourceTree = "<group>"; };
+		EBC077641933AEB400C39F83 /* NSData+EncodeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+EncodeData.m"; sourceTree = "<group>"; };
+		EBC077661933AF5000C39F83 /* SSCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCrypto.h; sourceTree = "<group>"; };
+		EBC077671933AF5000C39F83 /* SSCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCrypto.m; sourceTree = "<group>"; };
+		EBC0776B1933B01600C39F83 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EBC0776D1933B01600C39F83 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		EBC0776E1933B01600C39F83 /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
+		EBC0776F1933B01600C39F83 /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
+		EBC077701933B01600C39F83 /* asn1t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1t.h; sourceTree = "<group>"; };
+		EBC077711933B01600C39F83 /* bio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bio.h; sourceTree = "<group>"; };
+		EBC077721933B01600C39F83 /* blowfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blowfish.h; sourceTree = "<group>"; };
+		EBC077731933B01600C39F83 /* bn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bn.h; sourceTree = "<group>"; };
+		EBC077741933B01600C39F83 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		EBC077751933B01600C39F83 /* camellia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = camellia.h; sourceTree = "<group>"; };
+		EBC077761933B01600C39F83 /* cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cast.h; sourceTree = "<group>"; };
+		EBC077771933B01600C39F83 /* cmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmac.h; sourceTree = "<group>"; };
+		EBC077781933B01600C39F83 /* cms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cms.h; sourceTree = "<group>"; };
+		EBC077791933B01600C39F83 /* comp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comp.h; sourceTree = "<group>"; };
+		EBC0777A1933B01600C39F83 /* conf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conf.h; sourceTree = "<group>"; };
+		EBC0777B1933B01600C39F83 /* conf_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conf_api.h; sourceTree = "<group>"; };
+		EBC0777C1933B01600C39F83 /* crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
+		EBC0777D1933B01600C39F83 /* des.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = des.h; sourceTree = "<group>"; };
+		EBC0777E1933B01600C39F83 /* des_old.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = des_old.h; sourceTree = "<group>"; };
+		EBC0777F1933B01600C39F83 /* dh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dh.h; sourceTree = "<group>"; };
+		EBC077801933B01600C39F83 /* dsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dsa.h; sourceTree = "<group>"; };
+		EBC077811933B01600C39F83 /* dso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dso.h; sourceTree = "<group>"; };
+		EBC077821933B01600C39F83 /* dtls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtls1.h; sourceTree = "<group>"; };
+		EBC077831933B01600C39F83 /* e_os2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = e_os2.h; sourceTree = "<group>"; };
+		EBC077841933B01600C39F83 /* ebcdic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ebcdic.h; sourceTree = "<group>"; };
+		EBC077851933B01600C39F83 /* ec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ec.h; sourceTree = "<group>"; };
+		EBC077861933B01600C39F83 /* ecdh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecdh.h; sourceTree = "<group>"; };
+		EBC077871933B01600C39F83 /* ecdsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecdsa.h; sourceTree = "<group>"; };
+		EBC077881933B01600C39F83 /* engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = engine.h; sourceTree = "<group>"; };
+		EBC077891933B01600C39F83 /* err.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = err.h; sourceTree = "<group>"; };
+		EBC0778A1933B01600C39F83 /* evp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evp.h; sourceTree = "<group>"; };
+		EBC0778B1933B01600C39F83 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		EBC0778C1933B01600C39F83 /* idea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = idea.h; sourceTree = "<group>"; };
+		EBC0778D1933B01600C39F83 /* krb5_asn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = krb5_asn.h; sourceTree = "<group>"; };
+		EBC0778E1933B01600C39F83 /* kssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kssl.h; sourceTree = "<group>"; };
+		EBC0778F1933B01600C39F83 /* lhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lhash.h; sourceTree = "<group>"; };
+		EBC077901933B01600C39F83 /* md4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md4.h; sourceTree = "<group>"; };
+		EBC077911933B01600C39F83 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		EBC077921933B01600C39F83 /* mdc2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdc2.h; sourceTree = "<group>"; };
+		EBC077931933B01600C39F83 /* modes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modes.h; sourceTree = "<group>"; };
+		EBC077941933B01600C39F83 /* obj_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = obj_mac.h; sourceTree = "<group>"; };
+		EBC077951933B01600C39F83 /* objects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objects.h; sourceTree = "<group>"; };
+		EBC077961933B01600C39F83 /* ocsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocsp.h; sourceTree = "<group>"; };
+		EBC077971933B01600C39F83 /* opensslconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opensslconf.h; sourceTree = "<group>"; };
+		EBC077981933B01600C39F83 /* opensslv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opensslv.h; sourceTree = "<group>"; };
+		EBC077991933B01600C39F83 /* ossl_typ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ossl_typ.h; sourceTree = "<group>"; };
+		EBC0779A1933B01600C39F83 /* pem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem.h; sourceTree = "<group>"; };
+		EBC0779B1933B01600C39F83 /* pem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
+		EBC0779C1933B01600C39F83 /* pkcs12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs12.h; sourceTree = "<group>"; };
+		EBC0779D1933B01600C39F83 /* pkcs7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs7.h; sourceTree = "<group>"; };
+		EBC0779E1933B01600C39F83 /* pqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pqueue.h; sourceTree = "<group>"; };
+		EBC0779F1933B01600C39F83 /* rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rand.h; sourceTree = "<group>"; };
+		EBC077A01933B01600C39F83 /* rc2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rc2.h; sourceTree = "<group>"; };
+		EBC077A11933B01600C39F83 /* rc4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rc4.h; sourceTree = "<group>"; };
+		EBC077A21933B01600C39F83 /* ripemd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ripemd.h; sourceTree = "<group>"; };
+		EBC077A31933B01600C39F83 /* rsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rsa.h; sourceTree = "<group>"; };
+		EBC077A41933B01600C39F83 /* safestack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safestack.h; sourceTree = "<group>"; };
+		EBC077A51933B01600C39F83 /* seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
+		EBC077A61933B01600C39F83 /* sha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha.h; sourceTree = "<group>"; };
+		EBC077A71933B01600C39F83 /* srp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = srp.h; sourceTree = "<group>"; };
+		EBC077A81933B01600C39F83 /* srtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = srtp.h; sourceTree = "<group>"; };
+		EBC077A91933B01600C39F83 /* ssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
+		EBC077AA1933B01600C39F83 /* ssl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl2.h; sourceTree = "<group>"; };
+		EBC077AB1933B01600C39F83 /* ssl23.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl23.h; sourceTree = "<group>"; };
+		EBC077AC1933B01600C39F83 /* ssl3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl3.h; sourceTree = "<group>"; };
+		EBC077AD1933B01600C39F83 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		EBC077AE1933B01600C39F83 /* symhacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symhacks.h; sourceTree = "<group>"; };
+		EBC077AF1933B01600C39F83 /* tls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tls1.h; sourceTree = "<group>"; };
+		EBC077B01933B01600C39F83 /* ts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ts.h; sourceTree = "<group>"; };
+		EBC077B11933B01600C39F83 /* txt_db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = txt_db.h; sourceTree = "<group>"; };
+		EBC077B21933B01600C39F83 /* ui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ui.h; sourceTree = "<group>"; };
+		EBC077B31933B01600C39F83 /* ui_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ui_compat.h; sourceTree = "<group>"; };
+		EBC077B41933B01600C39F83 /* whrlpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = whrlpool.h; sourceTree = "<group>"; };
+		EBC077B51933B01600C39F83 /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
+		EBC077B61933B01600C39F83 /* x509_vfy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509_vfy.h; sourceTree = "<group>"; };
+		EBC077B71933B01600C39F83 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
+		EBC077B81933B01600C39F83 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		EBC077B91933B01600C39F83 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBC0771F19339D3900C39F83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC077BB1933B01600C39F83 /* libcrypto.a in Frameworks */,
+				EBC0772619339D3900C39F83 /* Cocoa.framework in Frameworks */,
+				EBC077BC1933B01600C39F83 /* libssl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC0774019339D3900C39F83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC0774619339D3900C39F83 /* Cocoa.framework in Frameworks */,
+				EBC0774519339D3900C39F83 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBC0771919339D3900C39F83 = {
+			isa = PBXGroup;
+			children = (
+				EBC0772B19339D3900C39F83 /* HealthLifeDataGenerate */,
+				EBC0774919339D3900C39F83 /* HealthLifeDataGenerateTests */,
+				EBC0772419339D3900C39F83 /* Frameworks */,
+				EBC0772319339D3900C39F83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBC0772319339D3900C39F83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBC0772219339D3900C39F83 /* HealthLifeDataGenerate.app */,
+				EBC0774319339D3900C39F83 /* HealthLifeDataGenerateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBC0772419339D3900C39F83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBC077691933B01600C39F83 /* OpenSSL */,
+				EBC0772519339D3900C39F83 /* Cocoa.framework */,
+				EBC0774419339D3900C39F83 /* XCTest.framework */,
+				EBC0772719339D3900C39F83 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBC0772719339D3900C39F83 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBC0772819339D3900C39F83 /* AppKit.framework */,
+				EBC0772919339D3900C39F83 /* CoreData.framework */,
+				EBC0772A19339D3900C39F83 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		EBC0772B19339D3900C39F83 /* HealthLifeDataGenerate */ = {
+			isa = PBXGroup;
+			children = (
+				EBC077661933AF5000C39F83 /* SSCrypto.h */,
+				EBC077671933AF5000C39F83 /* SSCrypto.m */,
+				EBC077631933AEB400C39F83 /* NSData+EncodeData.h */,
+				EBC077641933AEB400C39F83 /* NSData+EncodeData.m */,
+				EBC0773719339D3900C39F83 /* AppDelegate.h */,
+				EBC0773819339D3900C39F83 /* AppDelegate.m */,
+				EBC0773A19339D3900C39F83 /* MainMenu.xib */,
+				EBC0775C19339FBC00C39F83 /* BaseViewController.h */,
+				EBC0775D19339FBC00C39F83 /* BaseViewController.m */,
+				EBC0775E19339FBC00C39F83 /* BaseViewController.xib */,
+				EBC0773D19339D3900C39F83 /* Images.xcassets */,
+				EBC0772C19339D3900C39F83 /* Supporting Files */,
+			);
+			path = HealthLifeDataGenerate;
+			sourceTree = "<group>";
+		};
+		EBC0772C19339D3900C39F83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBC0772D19339D3900C39F83 /* HealthLifeDataGenerate-Info.plist */,
+				EBC0772E19339D3900C39F83 /* InfoPlist.strings */,
+				EBC0773119339D3900C39F83 /* main.m */,
+				EBC0773319339D3900C39F83 /* HealthLifeDataGenerate-Prefix.pch */,
+				EBC0773419339D3900C39F83 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBC0774919339D3900C39F83 /* HealthLifeDataGenerateTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBC0774F19339D3900C39F83 /* HealthLifeDataGenerateTests.m */,
+				EBC0774A19339D3900C39F83 /* Supporting Files */,
+			);
+			path = HealthLifeDataGenerateTests;
+			sourceTree = "<group>";
+		};
+		EBC0774A19339D3900C39F83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBC0774B19339D3900C39F83 /* HealthLifeDataGenerateTests-Info.plist */,
+				EBC0774C19339D3900C39F83 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBC077691933B01600C39F83 /* OpenSSL */ = {
+			isa = PBXGroup;
+			children = (
+				EBC0776A1933B01600C39F83 /* include */,
+				EBC077B81933B01600C39F83 /* libcrypto.a */,
+				EBC077B91933B01600C39F83 /* libssl.a */,
+			);
+			path = OpenSSL;
+			sourceTree = "<group>";
+		};
+		EBC0776A1933B01600C39F83 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				EBC0776B1933B01600C39F83 /* LICENSE */,
+				EBC0776C1933B01600C39F83 /* openssl */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		EBC0776C1933B01600C39F83 /* openssl */ = {
+			isa = PBXGroup;
+			children = (
+				EBC0776D1933B01600C39F83 /* aes.h */,
+				EBC0776E1933B01600C39F83 /* asn1.h */,
+				EBC0776F1933B01600C39F83 /* asn1_mac.h */,
+				EBC077701933B01600C39F83 /* asn1t.h */,
+				EBC077711933B01600C39F83 /* bio.h */,
+				EBC077721933B01600C39F83 /* blowfish.h */,
+				EBC077731933B01600C39F83 /* bn.h */,
+				EBC077741933B01600C39F83 /* buffer.h */,
+				EBC077751933B01600C39F83 /* camellia.h */,
+				EBC077761933B01600C39F83 /* cast.h */,
+				EBC077771933B01600C39F83 /* cmac.h */,
+				EBC077781933B01600C39F83 /* cms.h */,
+				EBC077791933B01600C39F83 /* comp.h */,
+				EBC0777A1933B01600C39F83 /* conf.h */,
+				EBC0777B1933B01600C39F83 /* conf_api.h */,
+				EBC0777C1933B01600C39F83 /* crypto.h */,
+				EBC0777D1933B01600C39F83 /* des.h */,
+				EBC0777E1933B01600C39F83 /* des_old.h */,
+				EBC0777F1933B01600C39F83 /* dh.h */,
+				EBC077801933B01600C39F83 /* dsa.h */,
+				EBC077811933B01600C39F83 /* dso.h */,
+				EBC077821933B01600C39F83 /* dtls1.h */,
+				EBC077831933B01600C39F83 /* e_os2.h */,
+				EBC077841933B01600C39F83 /* ebcdic.h */,
+				EBC077851933B01600C39F83 /* ec.h */,
+				EBC077861933B01600C39F83 /* ecdh.h */,
+				EBC077871933B01600C39F83 /* ecdsa.h */,
+				EBC077881933B01600C39F83 /* engine.h */,
+				EBC077891933B01600C39F83 /* err.h */,
+				EBC0778A1933B01600C39F83 /* evp.h */,
+				EBC0778B1933B01600C39F83 /* hmac.h */,
+				EBC0778C1933B01600C39F83 /* idea.h */,
+				EBC0778D1933B01600C39F83 /* krb5_asn.h */,
+				EBC0778E1933B01600C39F83 /* kssl.h */,
+				EBC0778F1933B01600C39F83 /* lhash.h */,
+				EBC077901933B01600C39F83 /* md4.h */,
+				EBC077911933B01600C39F83 /* md5.h */,
+				EBC077921933B01600C39F83 /* mdc2.h */,
+				EBC077931933B01600C39F83 /* modes.h */,
+				EBC077941933B01600C39F83 /* obj_mac.h */,
+				EBC077951933B01600C39F83 /* objects.h */,
+				EBC077961933B01600C39F83 /* ocsp.h */,
+				EBC077971933B01600C39F83 /* opensslconf.h */,
+				EBC077981933B01600C39F83 /* opensslv.h */,
+				EBC077991933B01600C39F83 /* ossl_typ.h */,
+				EBC0779A1933B01600C39F83 /* pem.h */,
+				EBC0779B1933B01600C39F83 /* pem2.h */,
+				EBC0779C1933B01600C39F83 /* pkcs12.h */,
+				EBC0779D1933B01600C39F83 /* pkcs7.h */,
+				EBC0779E1933B01600C39F83 /* pqueue.h */,
+				EBC0779F1933B01600C39F83 /* rand.h */,
+				EBC077A01933B01600C39F83 /* rc2.h */,
+				EBC077A11933B01600C39F83 /* rc4.h */,
+				EBC077A21933B01600C39F83 /* ripemd.h */,
+				EBC077A31933B01600C39F83 /* rsa.h */,
+				EBC077A41933B01600C39F83 /* safestack.h */,
+				EBC077A51933B01600C39F83 /* seed.h */,
+				EBC077A61933B01600C39F83 /* sha.h */,
+				EBC077A71933B01600C39F83 /* srp.h */,
+				EBC077A81933B01600C39F83 /* srtp.h */,
+				EBC077A91933B01600C39F83 /* ssl.h */,
+				EBC077AA1933B01600C39F83 /* ssl2.h */,
+				EBC077AB1933B01600C39F83 /* ssl23.h */,
+				EBC077AC1933B01600C39F83 /* ssl3.h */,
+				EBC077AD1933B01600C39F83 /* stack.h */,
+				EBC077AE1933B01600C39F83 /* symhacks.h */,
+				EBC077AF1933B01600C39F83 /* tls1.h */,
+				EBC077B01933B01600C39F83 /* ts.h */,
+				EBC077B11933B01600C39F83 /* txt_db.h */,
+				EBC077B21933B01600C39F83 /* ui.h */,
+				EBC077B31933B01600C39F83 /* ui_compat.h */,
+				EBC077B41933B01600C39F83 /* whrlpool.h */,
+				EBC077B51933B01600C39F83 /* x509.h */,
+				EBC077B61933B01600C39F83 /* x509_vfy.h */,
+				EBC077B71933B01600C39F83 /* x509v3.h */,
+			);
+			path = openssl;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBC0772119339D3900C39F83 /* HealthLifeDataGenerate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBC0775319339D3900C39F83 /* Build configuration list for PBXNativeTarget "HealthLifeDataGenerate" */;
+			buildPhases = (
+				EBC0771E19339D3900C39F83 /* Sources */,
+				EBC0771F19339D3900C39F83 /* Frameworks */,
+				EBC0772019339D3900C39F83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthLifeDataGenerate;
+			productName = HealthLifeDataGenerate;
+			productReference = EBC0772219339D3900C39F83 /* HealthLifeDataGenerate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBC0774219339D3900C39F83 /* HealthLifeDataGenerateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBC0775619339D3900C39F83 /* Build configuration list for PBXNativeTarget "HealthLifeDataGenerateTests" */;
+			buildPhases = (
+				EBC0773F19339D3900C39F83 /* Sources */,
+				EBC0774019339D3900C39F83 /* Frameworks */,
+				EBC0774119339D3900C39F83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBC0774819339D3900C39F83 /* PBXTargetDependency */,
+			);
+			name = HealthLifeDataGenerateTests;
+			productName = HealthLifeDataGenerateTests;
+			productReference = EBC0774319339D3900C39F83 /* HealthLifeDataGenerateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBC0771A19339D3900C39F83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ping An Health Insurance Company of China, Ltd.";
+				TargetAttributes = {
+					EBC0774219339D3900C39F83 = {
+						TestTargetID = EBC0772119339D3900C39F83;
+					};
+				};
+			};
+			buildConfigurationList = EBC0771D19339D3900C39F83 /* Build configuration list for PBXProject "HealthLifeDataGenerate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBC0771919339D3900C39F83;
+			productRefGroup = EBC0772319339D3900C39F83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBC0772119339D3900C39F83 /* HealthLifeDataGenerate */,
+				EBC0774219339D3900C39F83 /* HealthLifeDataGenerateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBC0772019339D3900C39F83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC077BA1933B01600C39F83 /* LICENSE in Resources */,
+				EBC0773019339D3900C39F83 /* InfoPlist.strings in Resources */,
+				EBC0776019339FBC00C39F83 /* BaseViewController.xib in Resources */,
+				EBC0773E19339D3900C39F83 /* Images.xcassets in Resources */,
+				EBC0773619339D3900C39F83 /* Credits.rtf in Resources */,
+				EBC0773C19339D3900C39F83 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC0774119339D3900C39F83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC0774E19339D3900C39F83 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBC0771E19339D3900C39F83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC077681933AF5000C39F83 /* SSCrypto.m in Sources */,
+				EBC077651933AEB400C39F83 /* NSData+EncodeData.m in Sources */,
+				EBC0773919339D3900C39F83 /* AppDelegate.m in Sources */,
+				EBC0775F19339FBC00C39F83 /* BaseViewController.m in Sources */,
+				EBC0773219339D3900C39F83 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC0773F19339D3900C39F83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC0775019339D3900C39F83 /* HealthLifeDataGenerateTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBC0774819339D3900C39F83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBC0772119339D3900C39F83 /* HealthLifeDataGenerate */;
+			targetProxy = EBC0774719339D3900C39F83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBC0772E19339D3900C39F83 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC0772F19339D3900C39F83 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EBC0773419339D3900C39F83 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC0773519339D3900C39F83 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		EBC0773A19339D3900C39F83 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC0773B19339D3900C39F83 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		EBC0774C19339D3900C39F83 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC0774D19339D3900C39F83 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBC0775119339D3900C39F83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EBC0775219339D3900C39F83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EBC0775419339D3900C39F83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HealthLifeDataGenerate/HealthLifeDataGenerate-Prefix.pch";
+				INFOPLIST_FILE = "HealthLifeDataGenerate/HealthLifeDataGenerate-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenSSL",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EBC0775519339D3900C39F83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HealthLifeDataGenerate/HealthLifeDataGenerate-Prefix.pch";
+				INFOPLIST_FILE = "HealthLifeDataGenerate/HealthLifeDataGenerate-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenSSL",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EBC0775719339D3900C39F83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HealthLifeDataGenerate.app/Contents/MacOS/HealthLifeDataGenerate";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HealthLifeDataGenerate/HealthLifeDataGenerate-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HealthLifeDataGenerateTests/HealthLifeDataGenerateTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EBC0775819339D3900C39F83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HealthLifeDataGenerate.app/Contents/MacOS/HealthLifeDataGenerate";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HealthLifeDataGenerate/HealthLifeDataGenerate-Prefix.pch";
+				INFOPLIST_FILE = "HealthLifeDataGenerateTests/HealthLifeDataGenerateTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBC0771D19339D3900C39F83 /* Build configuration list for PBXProject "HealthLifeDataGenerate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC0775119339D3900C39F83 /* Debug */,
+				EBC0775219339D3900C39F83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBC0775319339D3900C39F83 /* Build configuration list for PBXNativeTarget "HealthLifeDataGenerate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC0775419339D3900C39F83 /* Debug */,
+				EBC0775519339D3900C39F83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EBC0775619339D3900C39F83 /* Build configuration list for PBXNativeTarget "HealthLifeDataGenerateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC0775719339D3900C39F83 /* Debug */,
+				EBC0775819339D3900C39F83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBC0771A19339D3900C39F83 /* Project object */;
+}

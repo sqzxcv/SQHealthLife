@@ -54,6 +54,20 @@
     
     [[SQDataCenter shareDataCenter] checkUpdateList];
     
+    NSArray *allSeeds = [NSArray arrayWithContentsOfFile:[[[SQDataCenter shareDataCenter] seedsFullPath] stringByAppendingPathComponent:@"Seeds.plist"]];
+    for (NSDictionary *seedItem in allSeeds)
+    {
+        [[SQDataCenter shareDataCenter] cancelFavoriteSeed:seedItem];
+        [[SQDataCenter shareDataCenter] favoriteSeed:seedItem];
+    }
+    
+    NSArray *allPhotos = [NSArray arrayWithContentsOfFile:[[[SQDataCenter shareDataCenter] photosFullPath] stringByAppendingPathComponent:@"Photos.plist"]];
+    for (NSDictionary *photoItem in allPhotos)
+    {
+        [[SQDataCenter shareDataCenter] cancelFavoritePhoto:photoItem];
+        [[SQDataCenter shareDataCenter] favoritePhoto:photoItem];
+    }
+    
     return YES;
 }
 
